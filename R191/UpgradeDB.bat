@@ -3,7 +3,7 @@
 IF "%~1"=="" (
 :::::::::::::::::::::::::::::::
 SET ServerName=EDMOND-PC\edmond
-SET DBName=OffersII
+SET DBName=OffersI
 SET FileName=R191.sql
 ::If not Integrated Security set the username and password
 SET Username=sa
