@@ -5,7 +5,6 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_PADDING ON
-RAISERROR(50001, 16, 1);
 GO
 
 -- --------------------------------------------------

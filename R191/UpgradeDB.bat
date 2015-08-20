@@ -1,5 +1,6 @@
 @ECHO off
 
+IF "%~1"=="" (
 :::::::::::::::::::::::::::::::
 SET ServerName=EDMOND-PC\edmond
 SET DBName=OffersII
@@ -7,8 +8,14 @@ SET FileName=R191.sql
 ::If not Integrated Security set the username and password
 SET Username=sa
 SET Password=leylo09
-:::::::::::::::::::::::::::::::
 
+) ELSE (
+SET ServerName=%1
+SET DBName=%2
+SET FileName=%3
+SET Username=%4
+SET Password=%5
+)
 
 
 SET RESULT=false
