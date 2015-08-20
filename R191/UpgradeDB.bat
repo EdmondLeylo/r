@@ -56,4 +56,4 @@ IF "%RESULT%" == "TRUE" (
 	
 PAUSE
 
-::Exit
+Exit
