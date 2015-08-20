@@ -5,8 +5,8 @@ SET ServerName=EDMOND-PC\edmond
 SET DBName=OffersII
 SET FileName=R191.sql
 ::If not Integrated Security set the username and password
-SET Username=
-SET Password=
+SET Username=sa
+SET Password=leylo09
 :::::::::::::::::::::::::::::::
 
 
