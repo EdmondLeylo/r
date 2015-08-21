@@ -14,8 +14,8 @@ SET Password=%4
 )
 
 SET DB_INFO=TRUE
-IF [%ServerName%] == [] set DB_INFO=FALSE
-IF [%DBName%] == [] set DB_INFO=FALSE
+IF [%ServerName%] == [] SET DB_INFO=FALSE
+IF [%DBName%] == [] SET DB_INFO=FALSE
 IF "%DB_INFO%" == "FALSE" (
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	echo :::::Error: Please provide the required missing info ServerName\DBName:::::.
@@ -26,17 +26,18 @@ IF "%DB_INFO%" == "FALSE" (
 
 
 SET INTEGRATED_SECURITY=FALSE
-IF [%ServerName%] == [] set INTEGRATED_SECURITY=TRUE
-IF [%Password%] == [] set INTEGRATED_SECURITY=TRUE
+IF [%ServerName%] == [] SET INTEGRATED_SECURITY=TRUE
+IF [%Password%] == [] SET INTEGRATED_SECURITY=TRUE
 
 SET ReleaseDIR=%~dp0
 SET ReleaseFolder=%ReleaseDIR:~0,-1%
-for %%f IN ("%ReleaseFolder%") DO SET ReleaseNumber=%%~nxf
 
-IF NOT EXIST "%ReleaseDIR%%ReleaseNumber%.txt" (
+IF "%ReleaseNumber%" == "" (for %%f IN ("%ReleaseFolder%") DO SET ReleaseNumber=%%~nxf)
+
+IF NOT EXIST "%ReleaseDIR%index.txt" (
 
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
-	echo ::::: Error: %ReleaseNumber%.txt was not found. The DB upgrade has terminated ::::.
+	echo ::::: Error: index.txt was not found. The DB upgrade has terminated :::.
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	GOTO END
 
@@ -55,7 +56,7 @@ SET ReleaseScriptFile=%ReleaseDIR%%ReleaseFileName%
 @ECHO --Begin Transaction>> "%ReleaseScriptFile%"
 @ECHO BEGIN TRAN;>> "%ReleaseScriptFile%"
 @ECHO GO>> "%ReleaseScriptFile%"
-FOR /F "usebackq tokens=* delims=" %%x in ("%ReleaseDIR%%ReleaseNumber%.txt") DO (
+FOR /F "usebackq tokens=* delims=" %%x in ("%ReleaseDIR%index.txt") DO (
 	@ECHO :r $^(path^)%%x>> "%ReleaseScriptFile%"
 	@ECHO GO>> "%ReleaseScriptFile%"	
 )
