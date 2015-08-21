@@ -5,7 +5,6 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_PADDING ON
-RAISERROR('My Error Message',14,1)
 GO
 
 -- --------------------------------------------------
@@ -54,7 +53,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 
-
 CREATE TRIGGER [dbo].[trigger_InsertAttributeSetting_Attributes] ON [dbo].[Attributes]
 FOR INSERT
 
@@ -70,7 +68,6 @@ INSERT INTO AttributeSettings
         Id
         FROM inserted
 END
-
 GO
 
 CREATE TABLE [dbo].[AttributeOptions](
@@ -194,6 +191,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BAS
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '60', 'Antigua and Barbuda');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '61', 'Aruba');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '62', 'Bahamas The');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '63', 'Barbados');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '64', 'British Virgin Islands');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '65', 'Cayman Islands');
@@ -294,6 +292,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BAS
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '160', 'Yemen');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '161', 'Bermuda');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '162', 'Canada');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '163', 'Greenland');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '164', 'Saint Pierre and Miquelon');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ6', '165', 'United States');
@@ -396,6 +395,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BAS
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ8', '26', 'Lithuanian');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ8', '27', 'Malay');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ8', '28', 'Norwegian');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ8', '29', 'Polish');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ8', '30', 'Portuguese');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ8', '31', 'Romanian');
@@ -507,6 +507,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BAS
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('BASCQ19NEW_1_5_T', 'Child5_Gender', 'Child5_Gender', 'Please fill in the gender for child 5 that lives in your home.', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ19NEW_1_5_T', '1', 'Male');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('BASCQ19NEW_1_5_T', '2', 'Female');
+GO
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('BASCQ19NEW_2_1_T', 'Child1_Date of birth', 'Child1_DateOfBirth', 'Please fill in the date of birth for child 1 that lives in your home.', 'date');
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('BASCQ19NEW_2_2_T', 'Child2_Date of birth', 'Child2_DateOfBirth', 'Please fill in the date of birth for child 2 that lives in your home.', 'date');
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('BASCQ19NEW_2_3_T', 'Child3_Date of birth', 'Child3_DateOfBirth', 'Please fill in the date of birth for child 3 that lives in your home.', 'date');
@@ -618,6 +619,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ9', '5', 'Coast Guard');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ9', '6', 'National Guard');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ9', '7', 'Australian Defense Force');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ9', '8', 'Special Operations Command');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ9', '9', 'Other');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ9', '10', 'Finance Guards');
@@ -723,6 +725,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '34', 'Computer Software and Services - Data Processing Software and Services');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '35', 'Computer Software and Services - Miscellaneous Computer Services');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '36', 'Computer Software and Services - Computer Products Distribution and Support');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '37', 'Consumer Products (Durables) - Appliances');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '38', 'Consumer Products (Durables) - Home Furnishings');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '39', 'Consumer Products (Durables) - Housewares and Accessories');
@@ -823,6 +826,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '134', 'Beverages - Wineries');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '135', 'Beverages - Distillers');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '136', 'Beverages - Bottlers and Wholesale Distributors');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '137', 'Beverages - Soft Drinks');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '138', 'Tobacco Products');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '139', 'Health Products and Services - Medical Instruments and Supplies');
@@ -923,6 +927,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '234', 'Real Estate - Real Estate Development');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '235', 'Real Estate - Residential Construction');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '236', 'Real Estate - Miscellaneous Real Estate Services');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '237', 'Retail - Clothing  Shoe  and Accessory Retailing and Wholesale');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '238', 'Retail - Department Stores');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ16', '239', 'Retail - Discount and Variety Retailing');
@@ -1024,6 +1029,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ17', '20', 'Product Management  Research and Development  Strategic Planning  and Operations Occupations');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ17', '21', 'Production Occupations');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ17', '22', 'Protective Service Occupations');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ17', '23', 'Sales  Account Management  Marketing  and Advertising Occupations');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ17', '25', 'Student');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ17', '26', 'Transportation and Material Moving Occupation');
@@ -1125,6 +1131,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '94', 'Urban planner');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '95', 'Building inspector');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '96', 'Drafter');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '97', 'Teacher');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '98', 'Trainer');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '99', 'Librarian');
@@ -1225,6 +1232,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '194', 'Child care worker');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '195', 'Flight or other transportation attendant');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '196', 'Funeral worker (attendant, embalmer, etc.)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '197', 'Gaming operators/supervisors');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '198', 'Greeter/receptionist/host/hostess/usher/attendant');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ38', '199', 'Hotel worker (concierge, porter, etc.)');
@@ -1329,6 +1337,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ24', '21', '5,000 - 9,999');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ24', '22', '10,000 - 24,999');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ24', '23', '25,000 or more');
+GO
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('EMPYQ40', 'Number of  PCs company owns wordwide', 'CompanyPCs', 'How many PCs does your company own at worldwide?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ40', '1', 'None');
@@ -1440,6 +1449,7 @@ insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('EMPYQ31
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ31_5', '1', 'Decision Maker');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ31_5', '2', 'Influencer');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ31_5', '3', 'Not Involved');
+GO
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('EMPYQ31_6', 'Purchasing Role_HR/Personnel Services', 'PurchRoleHR', 'How would you best describe your role when it comes to purchasing the following business items at work?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ31_6', '1', 'Decision Maker');
@@ -1562,6 +1572,7 @@ insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('EMPYQ34
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ34', '1', 'AIMS - Australian Institute of medical scientists');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ34', '2', 'AMA - Australian Medical Association');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ34', '3', 'ADA - Australian Dentists Association');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ34', '4', 'CPA - chartered accountants');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ34', '5', 'ICAA - Institute of chartered accountants Australia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('EMPYQ34', '6', 'APS - Australian Psychological Society');
@@ -1673,6 +1684,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('FNC
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('FNCEQ7', '2', 'AIG American International Group');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('FNCEQ7', '3', 'American Century');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('FNCEQ7', '4', 'American Funds Group');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('FNCEQ7', '5', 'Ameriprise Financial');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('FNCEQ7', '6', 'Bank of America');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('FNCEQ7', '7', 'Bear Stearns');
@@ -1787,6 +1799,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLT
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ2', '5', '10 or more');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('HLTHQ3', 'Use to correct vision', 'VisionAids', 'What do you use to correct your vision? (Check all that apply)', 'Multiple');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ3', '1', 'Glasses');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ3', '2', 'Contact Lens');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ3', '3', 'LASIK Surgery');
@@ -1891,6 +1904,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLT
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('HLTHQ7', 'Plastic Surgery_Have ever had', 'PlasticSurgery', 'Have you ever had any plastic surgery?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ7', '1', 'Yes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ7', '2', 'No');
+GO
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('HLTHQ8', 'Plastic surgeries_Had', 'PlasticSurgeryType', 'Which of the following plastic surgeries have you had?', 'Multiple');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ8', '1', 'Facelift');
@@ -1997,6 +2011,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLT
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('HLTHQ13', 'Health Insurance_Have health Insurance', 'HealthInsurance', 'Do you have health insurance?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ13', '1', 'Yes');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ13', '2', 'No');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('HLTHQ14', 'Health Insurance_Provided by work', 'HealthInsuranceProvided', 'Is your health insurance provided to you by your work?', 'Single');
@@ -2106,6 +2121,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLT
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ22', '4', '5-6 days a week');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ22', '5', 'Daily');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HLTHQ22', '6', 'None of these');
+GO
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('HHLDQ4', 'Rent or own home', 'RentOwn', 'Do you rent or own your home?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('HHLDQ4', '1', 'Rent');
@@ -2216,6 +2232,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INT
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ1', '5', 'Mystery shopping');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ1', '6', 'None of the above');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ1', '7', 'In-home trials of new products');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ1', '8', 'Text message surveys on your mobile phone');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('INTRQ2', 'Number of movies seen in a cinema', 'NumberMovies', 'How many movies have you seen in a cinema in the last 12 months?', 'Single');
@@ -2328,6 +2345,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INT
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ13', '8', 'Action sports games such as Tony Hawk Underground or SSX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ13', '9', 'Platform games such as Super Mario Sunshine or Rayman');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ13', '10', 'Massively multiplayer online games such as EverQuest  Star Wars Galaxies  or WoW');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ13', '11', 'Action/adventure games that are NOT movie based  such as Splinter Cell  Metal Gear Solid');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ13', '12', 'Action/adventure games that ARE movie-based  such as Spider-Man  or Lord of the Rings');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ13', '13', 'Fighting games such as Mortal Combat  Tekken  or Soul Calibur');
@@ -2438,6 +2456,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INT
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ23', '15', 'Fashion');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ23', '16', 'Fire prevention');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ23', '17', 'Furniture');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ23', '18', 'Home entertainment');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ23', '19', 'Home furnishings');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('INTRQ23', '20', 'Home security');
@@ -2548,6 +2567,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRC
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('PRCHQ9', 'Dollar stores', 'DollarStores', 'Which of the following dollar stores have you visited in the past 12 months? (Check all that apply)', 'Multiple');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ9', '1', 'Dollar General');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ9', '2', 'Dollar Tree');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ9', '3', 'Family Dollar');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ9', '4', 'Other');
@@ -2654,6 +2674,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRC
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ15', '4', 'Hallmark');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ15', '5', 'Icing by Claires');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ15', '6', 'LensCrafters/LensCrafters Optique');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ15', '7', 'Pearle Vision');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ15', '8', 'Sunglasses Hut');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ15', '9', 'Other');
@@ -2762,6 +2783,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRC
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ23', '3', 'Bloomingdales');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ23', '4', 'Bon Marche/Bon-Macys');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ23', '5', 'Boston Store');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ23', '6', 'Burdines');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ23', '7', 'Carson Pirie Scott');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ23', '8', 'Dillards');
@@ -2864,6 +2886,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRC
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ25', '6', 'Naturalizer Shoes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ25', '7', 'Nine West');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ25', '8', 'Parade Shoes');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ25', '9', 'Payless Shoe Source');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ25', '10', 'Red Wing Shoes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ25', '11', 'Steve Madden');
@@ -2968,6 +2991,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRC
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ29', '33', 'Michele');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ29', '34', 'Movado');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ29', '35', 'Nike');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ29', '36', 'Nixon');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ29', '37', 'Omega');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('PRCHQ29', '38', 'Philippe-Charriol');
@@ -3073,6 +3097,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '58', 'Norfolk Island');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '59', 'Anguilla');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '60', 'Antigua and Barbuda');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '61', 'Aruba');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '62', 'Bahamas The');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '63', 'Barbados');
@@ -3173,6 +3198,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '158', 'Turkey');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '159', 'United Arab Emirates');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '160', 'Yemen');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '161', 'Bermuda');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '162', 'Canada');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREcontact_country', '163', 'Greenland');
@@ -3274,6 +3300,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CORElanguage', '30', 'Kazakh');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CORElanguage', '31', 'Khmer');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CORElanguage', '32', 'Korean');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CORElanguage', '33', 'Latvian');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CORElanguage', '34', 'Lithuanian');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CORElanguage', '35', 'Malay');
@@ -3375,6 +3402,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '577', 'WILKES BARRE-SCRANTO');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '581', 'TERRE HAUTE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '582', 'LAFAYETTE, IN');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '583', 'ALPENA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '584', 'CHARLOTTESVILLE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '588', 'SOUTH BEND-ELKHART');
@@ -3475,6 +3503,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '756', 'BILLINGS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '757', 'BOISE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '758', 'IDAHO FALLS-POCATELL');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '759', 'CHEYENNE-SCOTTSBLUF');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '760', 'TWIN FALLS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREDMA', '762', 'MISSOULA');
@@ -3576,6 +3605,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200307', '200307');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200308', '200308');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200309', '200309');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200310', '200310');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200311', '200311');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200312', '200312');
@@ -3676,6 +3706,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200562', '200562');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200565', '200565');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200566', '200566');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200567', '200567');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200571', '200571');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200589', '200589');
@@ -3776,6 +3807,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200842', '200842');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200847', '200847');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200848', '200848');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200849', '200849');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200850', '200850');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '200851', '200851');
@@ -3876,6 +3908,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201267', '201267');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201277', '201277');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201280', '201280');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201282', '201282');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201283', '201283');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201285', '201285');
@@ -3976,6 +4009,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201727', '201727');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201728', '201728');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201729', '201729');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201733', '201733');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201740', '201740');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '201749', '201749');
@@ -4076,6 +4110,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202199', '202199');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202202', '202202');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202204', '202204');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202205', '202205');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202206', '202206');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202207', '202207');
@@ -4176,6 +4211,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202488', '202488');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202527', '202527');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202532', '202532');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202562', '202562');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202571', '202571');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '202572', '202572');
@@ -4276,6 +4312,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '203048', '203048');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '203066', '203066');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '203078', '203078');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '203080', '203080');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '203090', '203090');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '203114', '203114');
@@ -4376,6 +4413,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '205537', '205537');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '205544', '205544');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '205570', '205570');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '205937', '205937');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '206046', '206046');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '206157', '206157');
@@ -4476,6 +4514,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '8984573', '8984573');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '8998965', '8998965');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '9074242', '9074242');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '9132538', '9132538');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '9141083', '9141083');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '9238351', '9238351');
@@ -4576,6 +4615,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '13777940', '13777940');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '13805075', '13805075');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '13827061', '13827061');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '13912171', '13912171');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '13913532', '13913532');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', '13949614', '13949614');
@@ -4676,6 +4716,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'al_CoimbraFariasi', 'al_CoimbraFariasi');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'al_FabianoFernandes', 'al_FabianoFernandes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'al_MiecioWalti', 'al_MiecioWalti');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'al_TanganeliBuziquia', 'al_TanganeliBuziquia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Albertofesta', 'Albertofesta');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Alenasastrologie', 'Alenasastrologie');
@@ -4776,6 +4817,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'bloomerce', 'bloomerce');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'bluespade', 'bluespade');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Boli', 'Boli');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'bonniesblog', 'bonniesblog');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Bonsplansdunet', 'Bonsplansdunet');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'bot-cct', 'bot-cct');
@@ -4876,6 +4918,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'CIS_FIN', 'CIS_FIN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'CIS_USA', 'CIS_USA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'cis2', 'cis2');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'cityalert', 'cityalert');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'cityofbrea', 'cityofbrea');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'cityofludlow', 'cityofludlow');
@@ -4976,6 +5019,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'DeltaSigmaPi', 'DeltaSigmaPi');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'DELVINIA', 'DELVINIA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'DEMANDA', 'DEMANDA');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'demo', 'demo');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'DEMO_BJORN', 'DEMO_BJORN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'DEMO_KO', 'DEMO_KO');
@@ -5076,6 +5120,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'EMQ_2_USA', 'EMQ_2_USA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'EMR_CHN', 'EMR_CHN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Encuestanos', 'Encuestanos');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'eneten', 'eneten');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'eneten0', 'eneten0');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'eneten01', 'eneten01');
@@ -5176,6 +5221,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'freecashback', 'freecashback');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'FreeFreebies', 'FreeFreebies');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'freegoods', 'freegoods');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'freehbjobs', 'freehbjobs');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'freeinformation', 'freeinformation');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Freelance Internet', 'Freelance Internet');
@@ -5276,6 +5322,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'GRC_USA', 'GRC_USA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'greatsites_CC', 'greatsites_CC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Greece_promo', 'Greece_promo');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'GREEKRCRT', 'GREEKRCRT');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'greendotinterne', 'greendotinterne');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'greendotinterneTARGE', 'greendotinterneTARGE');
@@ -5376,6 +5423,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'interactivepros', 'interactivepros');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'interactopin', 'interactopin');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'InternationalICMLtd', 'InternationalICMLtd');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Internet_earners', 'Internet_earners');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Internetandtelommuni', 'Internetandtelommuni');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Internetmoney', 'Internetmoney');
@@ -5476,6 +5524,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'LBI_1T3M', 'LBI_1T3M');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'LBI_NB', 'LBI_NB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'LBI_NB3M', 'LBI_NB3M');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'LBI_RB3M', 'LBI_RB3M');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'lbycxq', 'lbycxq');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'ldhsurveys', 'ldhsurveys');
@@ -5576,6 +5625,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'luckypacificnet6', 'luckypacificnet6');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'luckypacificnet60', 'luckypacificnet60');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'luckypacificnet62', 'luckypacificnet62');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'luckypacificnet64', 'luckypacificnet64');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'luckypacificnet67', 'luckypacificnet67');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'luckypacificnet68', 'luckypacificnet68');
@@ -5676,6 +5726,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'metricsdirect', 'metricsdirect');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'metricsdirect6a4dfd1', 'metricsdirect6a4dfd1');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'metricsdirect8b1ec71', 'metricsdirect8b1ec71');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'metricsdirect96a7f25', 'metricsdirect96a7f25');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'metricsdirectb3f9783', 'metricsdirectb3f9783');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'metrosport', 'metrosport');
@@ -5776,6 +5827,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'ohurasyouji', 'ohurasyouji');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Okodukai', 'Okodukai');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'omgbua', 'omgbua');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'omgfzc', 'omgfzc');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'omghmw', 'omghmw');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'omgmkz', 'omgmkz');
@@ -5876,6 +5928,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'primeq', 'primeq');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'primeq4', 'primeq4');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'primeq41', 'primeq41');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'primeq414', 'primeq414');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'primeq45', 'primeq45');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'primeq457', 'primeq457');
@@ -5976,6 +6029,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Rubber_Duck_Theatre', 'Rubber_Duck_Theatre');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 's_a_program_beltrami', 's_a_program_beltrami');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 's_mania', 's_mania');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'sacrg793', 'sacrg793');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'samaraoprosru', 'samaraoprosru');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Sanmiguelhighschool', 'Sanmiguelhighschool');
@@ -6076,6 +6130,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'stanyer', 'stanyer');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'star594', 'star594');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'starfleet', 'starfleet');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'starstx_usa', 'starstx_usa');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'startanispinc', 'startanispinc');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Stereotypen', 'Stereotypen');
@@ -6176,6 +6231,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'tmcmedia05', 'tmcmedia05');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'tmcmedia052', 'tmcmedia052');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'tmcmedia12', 'tmcmedia12');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'tmcmedia14', 'tmcmedia14');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'tmcmedia141', 'tmcmedia141');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'tmcmedia146', 'tmcmedia146');
@@ -6276,6 +6332,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'USAFAMEQF', 'USAFAMEQF');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'USHisps', 'USHisps');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'USHSPEQF', 'USHSPEQF');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'usuariosVIGARO', 'usuariosVIGARO');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'Utrecht0107', 'Utrecht0107');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'v', 'v');
@@ -6376,6 +6433,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'yakyaihost', 'yakyaihost');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'yaroslavl', 'yaroslavl');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'YHYCPA', 'YHYCPA');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'youngaussiemums', 'youngaussiemums');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'ysx1357', 'ysx1357');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREpartner', 'yuanwenliu', 'yuanwenliu');
@@ -6481,6 +6539,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class', '1604', 'NL - C');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class', '1605', 'NL - D');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class', '1701', 'PL - A');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class', '1702', 'PL- B');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class', '1703', 'PL- C');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class', '1704', 'PL- D');
@@ -6583,6 +6642,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class_estimated', '305', 'UK - D');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class_estimated', '306', 'UK - E');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class_estimated', '401', 'FR - Farmer');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class_estimated', '402', 'FR - Craftsman, shopkeeper, business owner');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class_estimated', '403', 'FR - Executives and professionals');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsocial_class_estimated', '404', 'FR - Intermediate occupations');
@@ -6686,6 +6746,7 @@ insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('COREsms
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsms_opt_out', '1', 'Yes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREsms_opt_out', '2', 'No');
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('COREsms_opt_out_modified_date', 'SMS_Opt_Out_Modified_Date', 'SMSOptOutModifiedDate', 'SMS Opt Out Modified Date', 'character');
+GO
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('TECHQ1', 'Computer_Locations most often use', 'ComputerLocations', 'Please indicate the locations where you most often use computers. (Check all that apply)', 'Multiple');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ1', '1', 'Home');
@@ -6795,6 +6856,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TEC
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('TECHQ9', 'Printer_Kind_Home', 'PrinterKindHome', 'What kind of printers do you have at home? (Check all that apply)', 'Multiple');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ9', '1', 'Laser');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ9', '2', 'Ink jet');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ9', '3', 'All-in-One');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ9', '4', 'Color');
@@ -6902,6 +6964,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TEC
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ16', '19', 'Use an online shopping comparison engine (Bizrate.com)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ16', '20', 'Use an online travel search website (Expedia.com)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ16', '21', 'Use RSS/XML feeds');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ16', '22', 'watch short video clips (like YouTube)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ16', '23', 'Post on blogs');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ16', '24', 'None of the Above');
@@ -7010,6 +7073,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TEC
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('TECHQ24', 'Satellite Provider', 'SatelliteProvider', 'Who is your satellite provider?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ24', '1', 'DirectTV');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ24', '2', 'DISH Network');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ24', '3', 'Bell ExpressVu');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ24', '4', 'StarChoice');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ24', '5', 'Glorystar');
@@ -7113,6 +7177,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TEC
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ27', '6', 'Motorola');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ27', '7', 'Nextel');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ27', '8', 'Nokia');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ27', '9', 'Panasonic');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ27', '10', 'Qualcomm');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TECHQ27', '11', 'Samsung');
@@ -7217,6 +7282,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ2', '56', 'LAN Airlines');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ2', '57', 'Lauda Air');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ2', '58', 'Loganair');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ2', '59', 'LOT Polish Airlines');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ2', '60', 'LTU Airways');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ2', '61', 'Lufthansa');
@@ -7320,6 +7386,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '44', 'Ghana');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '45', 'Guinea');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '46', 'Guinea-Bissau');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '47', 'Liberia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '48', 'Mali');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '49', 'Mauritania');
@@ -7420,6 +7487,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '144', 'Switzerland');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '145', 'Armenia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '146', 'Azerbaijan');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '147', 'Bahrain');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '148', 'Georgia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ5', '149', 'Iraq');
@@ -7522,6 +7590,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '4', 'Eritrea');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '5', 'Ethiopia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '6', 'Kenya');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '7', 'Madagascar');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '8', 'Malawi');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '9', 'Mauritius');
@@ -7622,6 +7691,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '104', 'Poland');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '105', 'Romania');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '106', 'Russia');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '107', 'Slovakia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '108', 'Ukraine');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '109', 'Denmark');
@@ -7722,6 +7792,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '204', 'Bhutan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '205', 'India');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '206', 'Iran');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '207', 'Kazakhstan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '208', 'Kyrgyzstan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ7', '209', 'Maldives');
@@ -7829,6 +7900,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ14', '3', 'Alamo Rent A Car');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ14', '4', 'Avis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ14', '5', 'Budget');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ14', '6', 'Dollar Rent A Car');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ14', '7', 'Enterprise');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ14', '8', 'Europcar');
@@ -7937,6 +8009,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ22', '8', 'More than 50');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('TRVLQ24', 'Number of overnight air travel for pleasure', 'OvernightAirTravel2', 'Overnight with air travel for pleasure?', 'Single');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ24', '1', 'None');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ24', '2', '1-5');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('TRVLQ24', '3', '6-10');
@@ -8049,6 +8122,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_Q2', '13', 'Ford');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_Q2', '14', 'GMC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_Q2', '15', 'Honda');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_Q2', '16', 'Hummer');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_Q2', '17', 'Hyundai');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_Q2', '18', 'Infiniti');
@@ -8153,6 +8227,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR2_Q2', '25', 'Lexus');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR2_Q2', '26', 'Lincoln');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR2_Q2', '27', 'Lotus');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR2_Q2', '28', 'Maserati');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR2_Q2', '29', 'Maybach');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR2_Q2', '30', 'Mazda');
@@ -8257,6 +8332,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR3_Q2', '38', 'Pontiac');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR3_Q2', '39', 'Porsche');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR3_Q2', '40', 'Rolls-Royce');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR3_Q2', '41', 'Saab');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR3_Q2', '42', 'Saturn');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR3_Q2', '43', 'Scion');
@@ -8361,6 +8437,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR4_Q2', '51', 'Eagle');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR4_Q2', '52', 'Freightliner');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR4_Q2', '53', 'Other');
+GO
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('VCHLCAR4_Q8', 'Vehicle 4_Primary_Vehicle', 'Vehicle4Primary', 'Is this your primary vehicle?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR4_Q8', '1', 'Yes');
@@ -8468,6 +8545,7 @@ insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('VCHLCAT
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCATEGORY5', '1', 'Economy');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCATEGORY5', '2', 'Small Car');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCATEGORY5', '3', 'Mid Car');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCATEGORY5', '4', 'Standard');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCATEGORY5', '5', 'Full-size');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCATEGORY5', '6', 'Entry Luxury');
@@ -8583,6 +8661,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('VCHLQ19', 'When intend to purchase/lease new vehicle', 'NextVehicleWhen', 'When do you intend to purchase or lease your next new vehicle?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ19', '1', '1 - 12 months');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ19', '2', 'More than 1 year but less than 2 years');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ19', '3', 'More than 2 year but less than 3 years');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ19', '4', 'More than 3 year but less than 4 years');
@@ -8685,6 +8764,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '84', 'EXTREME');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '85', 'FAIRLAKE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '86', 'FIESTA');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '87', 'FIRENZA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '88', 'FLAGSTAFF');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '89', 'FLAIR');
@@ -8785,6 +8865,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '184', 'SANDPIPER');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '185', 'SANTA FE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '186', 'SCENIC CRUISER');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '187', 'SCOTTSDALE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '188', 'SEA BREEZE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ21', '189', 'SEA HAWK');
@@ -8886,6 +8967,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ22', '20', '2004');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ22', '21', '2005');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ22', '22', '2006');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ22', '23', '2007');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ22', '24', '2008 &amp; newer');
 --
@@ -8994,6 +9076,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ32', '47', 'Dual-Sport');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ32', '48', 'Enduro');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ32', '49', 'Motocross');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ32', '50', 'Supermoto');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ32', '51', 'Cruiser');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQ32', '52', 'Off-Road');
@@ -9097,6 +9180,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQNEW3', '11', 'Brand K (Classic, Secure, Family Oriented, Comfort &amp; Convenience, Safety &amp; Security)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQNEW3', '12', 'Brand L  (Outdoorsy, Rugged, Independent, Performance, Quality)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQNEW3', '13', 'Brand M (Family Oriented, Reliable, Hard Working, Reasonable Price/Cost to Own, Safety &amp; Security)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQNEW3', '14', 'Brand N (Reliable, Confident, Sincere, Reasonable Price/Cost to Own, Functionality &amp; Flexibility)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLQNEW3', '15', 'Brand O (Young, Trendy, Cool, Reasonable Price/Cost to Own, Quality)');
 --
@@ -9198,6 +9282,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '95', 'EXT');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '96', 'Fleetwood');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '97', 'Seville');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '98', 'Sixty Special');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '99', 'SRX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '100', 'STS');
@@ -9298,6 +9383,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '195', 'CRV');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '196', 'Civic CRX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '197', 'Civic Del Sol');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '198', 'Element');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '199', 'Fit');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '200', 'Insight');
@@ -9398,6 +9484,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '295', 'Discovery');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '296', 'Freelander');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '297', 'Land Rover');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '298', 'LR2');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '299', 'LR3');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '300', 'Range Rover');
@@ -9498,6 +9585,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '395', '240SX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '396', '280ZX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '397', '300ZX');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '398', '350Z');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '399', 'Altima');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '400', 'Altima Coupe');
@@ -9598,6 +9686,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '495', 'LW1');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '496', 'LW2');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '497', 'LW200');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '498', 'LW300');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '499', 'Outlook');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '500', 'Relay');
@@ -9698,6 +9787,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '595', '240 DL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '596', '240 GL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '597', '240 GLT');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '598', '240 SE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '599', '780');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '600', '850');
@@ -9798,6 +9888,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '695', 'Escape Hybrid');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '696', 'GR-1');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '697', 'Excursion');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '698', 'Expedition');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '699', 'Expedition EL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '700', 'Expedition Max/Everest');
@@ -9898,6 +9989,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '795', 'Grand Marquis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '796', 'Marauder');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '797', 'Mariner Hybrid');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '798', 'Cooper Clubman');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '799', 'Mirage');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '800', 'Space Wagon');
@@ -9998,6 +10090,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '895', 'Equus');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '896', 'G25');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '897', 'M');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '898', 'Cadenza');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '899', 'LFA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_1_Q3', '900', 'CT 200h');
@@ -10103,6 +10196,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '32', 'A4');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '33', 'A5');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '34', 'A6 Quattro');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '35', 'A8');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '36', 'Allroad');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '37', 'Cabriolet');
@@ -10203,6 +10297,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '132', 'Town &amp; Country');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '133', 'Voyager');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '134', 'Lanos');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '135', 'Leganza');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '136', 'Nubira');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '137', '600');
@@ -10303,6 +10398,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '232', 'M45');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '233', 'QX4');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '234', 'Q45');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '235', 'QX56');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '236', 'Amigo');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '237', 'Ascender');
@@ -10403,6 +10499,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '332', 'GranSport');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '333', 'GranSport Spyder');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '334', 'GranTourismo');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '335', 'MC12');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '336', 'Quattro Porte');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '337', 'M57');
@@ -10503,6 +10600,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '432', '6000');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '433', 'Aztek');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '434', 'Bonneville');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '435', 'Firebird/Trans Am');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '436', 'G5');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '437', 'G6');
@@ -10603,6 +10701,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '532', 'Aerio/Aerio SX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '533', 'Esteem');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '534', 'Forenza');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '535', 'Forenza Wagon');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '536', 'Grand Vitara');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '537', 'Reno');
@@ -10703,6 +10802,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '632', 'Bentley (British)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '633', '328');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '634', '318 IS');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '635', 'M5');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '636', 'Z8');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '637', 'Z4 Roadster/Coupe');
@@ -10803,6 +10903,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '732', 'Terracan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '733', 'CX35');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '734', 'FX');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '735', 'GT-R');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '736', 'Scrambler');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '737', 'Mojave');
@@ -10903,6 +11004,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '832', 'Samurai');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '833', '4Runner');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '834', 'Carina');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '835', 'FJ Cruiser');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '836', 'Highlander');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_2_Q3', '837', 'Highlander Hybrid');
@@ -11008,6 +11110,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '23', 'Virage');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '24', '80/90/Quattro');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '25', '90');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '26', '100/200/Quattro');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '27', '200');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '28', 'k');
@@ -11108,6 +11211,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '123', 'Cirrus');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '124', 'Concorde');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '125', 'Crossfire');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '126', 'Imperial');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '127', 'LeBaron');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '128', 'Pacifica');
@@ -11208,6 +11312,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '223', 'G20');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '224', 'G35');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '225', 'G35 Coupe');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '226', 'G35 Sedan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '227', 'I30');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '228', 'I35');
@@ -11308,6 +11413,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '323', 'Elan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '324', 'Elise');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '325', 'Esprit');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '326', 'Exige S');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '327', 'Type 72');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '328', '425');
@@ -11408,6 +11514,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '423', 'Acclaim');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '424', 'Breeze');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '425', 'Conquest');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '426', 'Gran Fury');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '427', 'Grand Voyager SE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '428', 'Laser');
@@ -11508,6 +11615,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '523', 'Impreza');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '524', 'Justy');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '525', 'Legacy');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '526', 'Loyale');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '527', 'Outback');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '528', 'RX');
@@ -11608,6 +11716,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '623', 'EL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '624', 'CL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '625', 'Aston Martin');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '626', 'Pikes Peak');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '627', 'Q5');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '628', 'Avant A4');
@@ -11708,6 +11817,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '723', 'Sierra 3500 Pickup');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '724', 'Sierra Pickup');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '725', 'EV Plus Electric Car');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '726', 'FCX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '727', 'Civic Hybrid');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '728', 'H2 SUV');
@@ -11808,6 +11918,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '823', 'WGN Ion');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '824', 'L-Series');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '825', 'SL3');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '826', 'Scion T2B');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '827', 'Smart Car');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_3_Q3', '828', 'WRX');
@@ -11913,6 +12024,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '14', 'RL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '15', 'SLX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '16', 'TL');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '17', 'TSX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '18', 'Vigor');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '19', 'DB7');
@@ -12013,6 +12125,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '114', 'HHR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '115', 'Impala');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '116', 'Lumina');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '117', 'Malibu');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '118', 'Monte Carlo');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '119', 'Nova');
@@ -12113,6 +12226,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '214', 'Santa Fe');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '215', 'Sonata');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '216', 'Tiburon');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '217', 'Tucson');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '218', 'Veracruz');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '219', 'XG300');
@@ -12213,6 +12327,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '314', 'Mark LT');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '315', 'Mark');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '316', 'Mark VII');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '317', 'Mark VIII');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '318', 'MKX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '319', 'MKZ');
@@ -12313,6 +12428,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '414', 'Cutlass Calais');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '415', 'Cutlass Ciera');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '416', 'Cutlass Cruiser');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '417', 'Intrigue');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '418', 'Oldsmobile 88');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '419', 'Oldsmobile 98');
@@ -12413,6 +12529,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '514', 'fortwo pure');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '515', 'fortwo passion');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '516', 'fortwo passion cabrio');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '517', 'forfour');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '518', 'roadster');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '519', 'formore');
@@ -12513,6 +12630,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '614', 'S70/V70');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '615', 'S80');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '616', 'S90/V90');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '617', 'V40/V50');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '618', 'V50');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '619', 'V70');
@@ -12613,6 +12731,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '714', 'Suburban');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '715', 'Yukon XL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '716', 'Yukon Denali');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '717', 'Yukon Denali XL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '718', 'GMC Van');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '719', 'Envoy XUV');
@@ -12713,6 +12832,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '814', 'LSS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '815', 'Neon');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '816', 'Voyager');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '817', 'Montana SV6');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '818', '928');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_4_Q3', '819', 'Astra');
@@ -12818,6 +12938,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '5', '3.2CL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '6', '3.2TL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '7', '3.5RL');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '8', 'Integra');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '9', 'Legend');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '10', 'MDX');
@@ -12918,6 +13039,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '105', 'Camaro');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '106', 'Caprice');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '107', 'Cavalier');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '108', 'Celebrity');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '109', 'Chevette');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '110', 'Citation');
@@ -13018,6 +13140,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '205', 'Ridgeline');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '206', 'S2000');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '207', 'H1');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '208', 'H2 SUT');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '209', 'H3');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '210', 'Accent');
@@ -13118,6 +13241,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '305', 'GSX/HPX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '306', 'LS400');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '307', 'LX450');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '308', 'RX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '309', 'SC300');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '310', 'Aviator');
@@ -13218,6 +13342,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '405', 'Stanza');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '406', 'Versa');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '407', 'Z');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '408', 'Achieva');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '409', 'Alero');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '410', 'Aurora');
@@ -13318,6 +13443,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '505', 'SL1');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '506', 'SL2');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '507', 'SW1');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '508', 'SW2');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '509', 'Vue');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '510', 'Scion tC');
@@ -13418,6 +13544,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '605', '940 GL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '606', '940 GLE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '607', '940 SE');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '608', '960');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '609', 'C30');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '610', 'C70');
@@ -13518,6 +13645,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '705', 'F250 Superduty Pickup');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '706', 'F350 Pickup');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '707', 'F350 Superduty Pickup');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '708', 'Freestyle');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '709', 'Freestar');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '710', 'F-Series Wagon/Traveler');
@@ -13618,6 +13746,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '805', 'GT-R');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '806', 'Murano');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '807', 'Pathfinder');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '808', 'Armada');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '809', 'Quest');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q3', '810', 'Rogue');
@@ -13722,6 +13851,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q7', '3', '2 to 3 years');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q7', '4', '4 to 5 years');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q7', '5', 'More than 5 years');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('VCHLCAR1_5_Q7', '6', 'Dont know');
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('Panelist_ID', 'Panelist_ID', 'PanelistId', 'Panelist ID', 'character');
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('DERVBASCChild1Age', 'Child1 Age', 'dervChild1Age', 'calculated based on birthdate', 'quantity');
@@ -13836,6 +13966,7 @@ insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('QUALTru
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('QUALTruthTestNumPassConsumer', 'Honesty Detector Pass Count Consumer', 'ttPassConsumer', 'Honesty Detector Pass Count Consumer', 'quantity');
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('QUALTruthTestNumPassMedical', 'Honesty Detector Pass Count Medical', 'ttPassMedical', 'Honesty Detector Pass Count Medical', 'quantity');
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('QUALTruthTestNumPassB2B', 'Honesty Detector Pass Count B2B', 'ttPassB2B', 'Honesty Detector Pass Count B2B', 'quantity');
+GO
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('QUALTruthTestNumPassB2BIT', 'Honesty Detector Pass Count B2BIT', 'ttPassB2BIT', 'Honesty Detector Pass Count B2BIT', 'quantity');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('QUALQasVerificationCode', 'QAS_Verification_Code', 'QAS_Verification_Code', 'QAS Verification Code', 'Single');
@@ -13949,6 +14080,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ8', '19', 'Home (indoor furnishings, accessories, supplies, d&#xE9;cor, bedding, etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ8', '20', 'Sports &amp; Fitness (equipment, accessories, apparel, etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ8', '21', 'Toys (bikes, board games, dolls, action figures, swing sets)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ8', '22', 'Hardware (tools, paint, ladders)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ8', '23', 'Automotive (motor oil, windshield wiper blades, tires, etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ8', '24', 'Camping Equipment (sleeping bags, tents, lanterns, etc.)');
@@ -14050,6 +14182,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_1', '91', 'Miracle Mart');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_1', '92', 'Murrys');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_1', '93', 'No Frills');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_1', '94', 'Pamida');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_1', '95', 'Pathmark');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_1', '96', 'Pick N Save');
@@ -14151,6 +14284,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '29', 'CVS Family Foods');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '30', 'Dahls');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '31', 'Dans Supermarket');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '32', 'Daves Marketplace');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '33', 'Dierbergs');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '34', 'Dillons');
@@ -14251,6 +14385,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '129', 'Stater Bros');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '130', 'Stop &amp; Shop');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '131', 'Sunmart Foods');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '132', 'Sunshine Foods');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '133', 'Super 1 Foods');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_2', '134', 'Super Fresh');
@@ -14352,6 +14487,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_3', '67', 'Harvest Foods');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_3', '68', 'Harveys');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_3', '69', 'Homeland Stores');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_3', '70', 'Hornbachers');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_3', '71', 'Houchens');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_3', '72', 'Hugos');
@@ -14453,6 +14589,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '5', 'Albertsons');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '6', 'Aldi');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '7', 'Apple Market');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '8', 'Bag N Save');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '9', 'Bakers');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '10', 'Bashas');
@@ -14553,6 +14690,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '105', 'Randalls');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '106', 'Rays Food Place');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '107', 'Reams');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '108', 'Reasors');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '109', 'Ridleys Food &amp; Drug');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_4', '110', 'Roche Bros');
@@ -14654,6 +14792,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '43', 'Felpausch');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '44', 'Fiesta Mart');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '45', 'Food 4 Less');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '46', 'Food City');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '47', 'Food Lion');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '48', 'Food Pavilion');
@@ -14754,6 +14893,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '143', 'Trader Joes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '144', 'Ukrops');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '145', 'United Supermarket');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '146', 'V G Food Center');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '147', 'Vons');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ9_5', '148', 'Waldbaum');
@@ -14860,6 +15000,7 @@ insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MAPSQ10
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ10_6', '1', 'Mens Apparel (clothing, underwear, shoes, accessories)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ10_6', '2', 'Womens Apparel (clothing, underwear, shoes, jewelry and accessories)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ10_6', '3', 'Childrens Apparel (clothing, underwear, shoes, accessories)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ10_6', '4', 'Infants &amp; Toddlers (clothing, car seats, feeding equipment, baby furniture)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ10_6', '6', 'Electronics (including computers, MP3 players, phones, TVs, video game consoles, etc., but EXCLUDING video games, DVDs, music CDs and books)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ10_6', '7', 'Video Games');
@@ -14971,6 +15112,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ12_10', '3', '50%');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ12_10', '4', '75%');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ12_10', '5', '100%');
+GO
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MAPSQ12_11', 'Online Purch_GroceryFresh', 'MaPS_OnlinePurch_GroceryFresh', 'What percent of your typical purchases are made online for Fresh Grocery', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ12_11', '1', '0%');
@@ -15088,6 +15230,7 @@ insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MAPSQ13
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_1', '1', 'Mens Apparel (clothing, underwear, shoes, accessories)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_1', '2', 'Womens Apparel (clothing, underwear, shoes, jewelry and accessories)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_1', '3', 'Childrens Apparel (clothing, underwear, shoes, accessories)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_1', '4', 'Infants &amp; Toddlers (clothing, car seats, feeding equipment, baby furniture)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_1', '5', 'Formula &amp; Diapers');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_1', '6', 'Electronics (including computers, MP3 players, phones, TVs, video game consoles, etc., but EXCLUDING video games, DVDs, music CDs and books)');
@@ -15191,6 +15334,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_4', '20', 'Sports &amp; Fitness (equipment, accessories, apparel, etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_4', '21', 'Toys (bikes, board games, dolls, action figures, swing sets)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_4', '22', 'Hardware (tools, paint, ladders)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_4', '23', 'Automotive (motor oil, windshield wiper blades, tires, etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_4', '24', 'Camping Equipment (sleeping bags, tents, lanterns, etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_4', '25', 'Small Household Appliances (toasters, coffee makers, etc.)');
@@ -15295,6 +15439,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_8', '12', 'Frozen Grocery (frozen meals, single-serve meals, ice cream, etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_8', '13', 'Non-alcoholic Beverages (soft drinks, juice, etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_8', '14', 'Household Paper &amp; Chemicals (paper towels, toilet paper, cleaning supplies, etc.)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_8', '15', 'Pet Supplies (food, treats, litter, accessories, etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_8', '16', 'Health &amp; Wellness (diet &amp; nutrition, home medical, over-the-counter medicines, vitamins, etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ13_8', '17', 'Pharmacy (prescriptions)');
@@ -15404,6 +15549,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MAPSQ18_3', 'Distance_Kmart', 'MaPS_Distance_Kmart', 'If you were going to shop at the following retailers, how long would it take for you to travel there?    Kmart', 'Multiple');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ18_3', '1', 'Less than 5 minutes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ18_3', '2', '5 minutes to less than 10 minutes');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ18_3', '3', '10 minutes to less than 20 minutes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ18_3', '4', '20 minutes to less than 30 minutes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ18_3', '5', '30 minutes to less than an hour');
@@ -15517,6 +15663,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MAPSQ23', 'Urbanicity', 'MaPS_Urbanicity', 'Would you describe the area in which you live as Urban, Suburban, or Rural?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ23', '1', 'Urban');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ23', '2', 'Suburban');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSQ23', '3', 'Rural');
 --
@@ -15632,6 +15779,7 @@ insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MBLEFBC
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MBLEFBLikes_Permission', 'FB_Likes_Permission', 'FacebookLikesPermission', 'Panelist has granted GMI permission to capture and store Likes and other Facebook data?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MBLEFBLikes_Permission', '1', 'Yes');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MBLEFBLikes_Permission', '2', 'No');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MBLEFBLikes_Permission', '3', 'Stale');
 --
@@ -15744,6 +15892,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COR
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('COREdisabled_reason', '31', 'Panel Decommissioned');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('LSRPdrop_reason', 'drop_reason', 'DropReason', 'Drop Reason', 'Single');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('LSRPdrop_reason', '1', 'Spam');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('LSRPdrop_reason', '2', 'Duplicate Membership');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('LSRPdrop_reason', '3', 'Foreign Address');
@@ -15851,6 +16000,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_1', '7', 'Chevrolet');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_1', '8', 'Chrysler');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_1', '9', 'Citron');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_1', '10', 'Dacia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_1', '11', 'Daewoo');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_1', '12', 'Daihatsu');
@@ -15952,6 +16102,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_2', '16', 'Geo');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_2', '17', 'GMC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_2', '18', 'Great Wall');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_2', '19', 'Holden');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_2', '20', 'Honda');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ3_2', '21', 'Hyundai');
@@ -16053,6 +16204,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '25', 'Alfa Romeo - 159');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '26', 'Alfa Romeo - 164');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '27', 'Alfa Romeo - 166');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '28', 'Alfa Romeo - 33');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '29', 'Alfa Romeo - Brera');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '30', 'Alfa Romeo - Crosswagon Q4');
@@ -16153,6 +16305,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '125', 'Chevrolet - Camaro');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '126', 'Chevrolet - Captiva');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '127', 'Chevrolet - Cavalier');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '128', 'Chevrolet - Chevy Full Size PU (Cheyenne/Scotsdale/Silverado/CK1500-3000/HD)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '129', 'Chevrolet - Cobalt');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '130', 'Chevrolet - Colorado');
@@ -16253,6 +16406,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '206', 'Daewoo - Espero');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '207', 'Daewoo - Evanda');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '208', 'Daewoo - Kalos');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '209', 'Daewoo - Korando');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '210', 'Daewoo - Lacetti');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '211', 'Daewoo - Lanos');
@@ -16353,6 +16507,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '295', 'Ford - Aerostar');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '296', 'Ford - B-Max');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '297', 'Ford - C-Max');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '298', 'Ford - Contour');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '299', 'Ford - Cougar');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '300', 'Ford - Crown Victoria');
@@ -16453,6 +16608,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '382', 'Honda - Civic coupe');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '383', 'Honda - Civic del Sol');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '384', 'Honda - Civic GX NGV');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '385', 'Honda - Civic Hybrid Sedan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '386', 'Honda - Civic Sedan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '387', 'Honda - Civic SI Coupe');
@@ -16553,6 +16709,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '468', 'Infiniti - M45/M35');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '469', 'Infiniti - Q45');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '470', 'Infiniti - QX4');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '471', 'Infiniti - QX56');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '472', 'Isuzu - Amigo');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '473', 'Isuzu - Ascender');
@@ -16653,6 +16810,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '565', 'Lincoln - Town Car');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '566', 'Lincoln - Zephyr/MKZ');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '567', 'Mazda - 121');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '568', 'Mazda - 2');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '569', 'Mazda - 3');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '570', 'Mazda - 5');
@@ -16753,6 +16911,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '663', 'Mitsubishi - Mighty Max');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '664', 'Mitsubishi - Mirage');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '665', 'Mitsubishi - Montero/Montero Pinin/Montero Sport');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '666', 'Mitsubishi - Outlander');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '667', 'Mitsubishi - Pajero/Challanger');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '668', 'Mitsubishi - Precis');
@@ -16853,6 +17012,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '757', 'Opel - Tigra');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '758', 'Opel - Vectra');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '759', 'Opel - Zafira');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '760', 'Peugeot - 1007');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '761', 'Peugeot - 106');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '762', 'Peugeot - 107');
@@ -16953,6 +17113,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '849', 'Renault - Koleos');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '850', 'Renault - Laguna');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '851', 'Renault - Laguna Coup');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '852', 'Renault - Logan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '853', 'Renault - Master');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '854', 'Renault - Megane');
@@ -17053,6 +17214,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '944', 'Suzuki - Equator');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '945', 'Suzuki - Esteem');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '946', 'Suzuki - Forenza');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '947', 'Suzuki - Grand Vitara/XL7');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '948', 'Suzuki - Ignis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '949', 'Suzuki - Jimny');
@@ -17153,6 +17315,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1031', 'Volkswagen - Passat');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1032', 'Volkswagen - Phaeton');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1033', 'Volkswagen - Polo');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1034', 'Volkswagen - Routan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1035', 'Volkswagen - Scirocco');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1036', 'Volkswagen - Sharan');
@@ -17253,6 +17416,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1280', 'Perodua - Viva');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1281', 'Ssangyong - Actyon');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1282', 'Ssangyong - Korando (C200)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1283', 'Ssangyong - Kyron');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1284', 'Ssangyong - Rexton');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1285', 'Ssangyong - Rodius');
@@ -17353,6 +17517,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1325', 'Tagaz (Other)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1326', 'Tata (Other)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1327', 'UAZ (Other)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_1', '1328', 'Zaz (Other)');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPVHQ4_2', 'Model_Car2', 'Car2Model', 'What is the name of the model of your second car?', 'Single');
@@ -17454,6 +17619,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '96', 'Buick - Roadmaster Sedan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '97', 'Buick - Skyhawk');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '98', 'Buick - Skylark');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '99', 'Buick - Somerset');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '100', 'Buick - Terraza Minivan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '101', 'Buick - Verano');
@@ -17554,6 +17720,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '179', 'Citron - C-Zero');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '180', 'Citron - C1');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '181', 'Citron - C2');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '182', 'Citron - C3');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '183', 'Citron - C3 Picasso');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '184', 'Citron - C3 Pluriel');
@@ -17654,6 +17821,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '269', 'Fiat - 500/Cinquecento');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '270', 'Fiat - A SUV');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '271', 'Fiat - Barchetta');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '272', 'Fiat - Brava');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '273', 'Fiat - Bravo');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '274', 'Fiat - Coup');
@@ -17754,6 +17922,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '362', 'GMC - Yukon');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '363', 'GMC - Yukon Hybrid');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '364', 'Great Wall - V240');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '365', 'Great Wall - X240');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1159', 'Great Wall - Deer');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1160', 'Great Wall - Hover');
@@ -17854,6 +18023,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '441', 'Hyundai - Santamo/Satellite');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '442', 'Hyundai - Scoupe');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '443', 'Hyundai - Sonata/i45');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '444', 'Hyundai - Terracan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '445', 'Hyundai - Tiburon');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '446', 'Hyundai - Trajet');
@@ -17954,6 +18124,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '538', 'Lancia - Z/Zeta');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1126', 'Lancia - Flavia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1127', 'Lancia - Voyager');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '539', 'Land Rover - Defender');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '540', 'Land Rover - Discovery/Discovery II');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '541', 'Land Rover - Evoque');
@@ -18054,6 +18225,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '635', 'Mercury - Sable');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '636', 'Mercury - Topaz');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '637', 'Mercury - Tracer');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '638', 'Mercury - Villager Passenger');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '639', 'Mini - Clubman');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '640', 'Mini - Clubvan');
@@ -18154,6 +18326,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '728', 'Oldsmobile - Cutlass Supreme');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '729', 'Oldsmobile - Delta 88');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '730', 'Oldsmobile - Firenza');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '731', 'Oldsmobile - Intrigue');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '732', 'Oldsmobile - Omega');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '733', 'Oldsmobile - Regency');
@@ -18254,6 +18427,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '826', 'Pontiac - Solstice');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '827', 'Pontiac - Sunbird');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '828', 'Pontiac - Sunfire');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '829', 'Pontiac - SV6');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '830', 'Pontiac - Torrent');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '831', 'Pontiac - Trans Am');
@@ -18354,6 +18528,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '916', 'Seat - Marbella');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '917', 'Seat - Mii');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '918', 'Seat - Toledo');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '919', 'Skoda - Citigo');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '920', 'Skoda - Fabia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '921', 'Skoda - Favorit/Forman');
@@ -18454,6 +18629,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1002', 'Vauxhall - Ampera');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1003', 'Vauxhall - Antara');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1004', 'Vauxhall - Astra');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1005', 'Vauxhall - Astravan');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1006', 'Vauxhall - Calibra');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1007', 'Vauxhall - Cascada');
@@ -18554,6 +18730,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1251', 'Inokom - Matrix');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1252', 'Inokom - Santa Fe');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1253', 'Izhmash - 2126 Orbita/Oda/Fabula');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1254', 'Izhmash - 27175');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1255', 'Lada - 110');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1256', 'Lada - 2101-2107');
@@ -18654,6 +18831,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1105', 'Saturn (Other)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1106', 'Scion (Other)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1107', 'Seat (Other)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1108', 'Skoda (Other)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1109', 'Smart (Other)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ4_2', '1110', 'Subaru (Other)');
@@ -18760,6 +18938,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ7_2', '12', '2005');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ7_2', '13', '2006');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ7_2', '14', '2007');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ7_2', '15', '2008');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ7_2', '16', '2009');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ7_2', '17', '2010');
@@ -18864,6 +19043,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ9_2', '20', '2013');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ9_2', '21', '2014');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ9_2', '22', '2015');
+GO
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPVHQ10', 'Bought or leased', 'PrimaryBoughtLeased', 'Is the primary vehicle bought or leased?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ10', '1', 'Bought');
@@ -18975,6 +19155,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ20_1', '8', 'Kawasaki');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ20_1', '9', 'KTM');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ20_1', '10', 'Suzuki');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ20_1', '11', 'Triumph');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ20_1', '12', 'Victory');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ20_1', '13', 'Yamaha');
@@ -19083,6 +19264,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPV
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ24', '3', '40-50K');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ24', '4', '50-70K');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ24', '5', '70-100K');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ24', '6', '100-150K');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ24', '7', '150-200K');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPVHQ24', '8', '200-300K');
@@ -19192,6 +19374,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPB
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPBAQ2', 'Birth Expected', 'BirthExpected', 'When is the birth expected?', 'date');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPBAQ3', 'Individual 1st baby', 'FirstBaby', 'Is this your first baby?', 'Single');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ3', '1', 'Yes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ3', '2', 'No');
 --
@@ -19304,6 +19487,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPB
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPBAQ10', 'Off-line activities', 'OfflineActivitiies', 'Which of the following activities do you participate in regularly (not online)?', 'Multiple');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ10', '1', 'Free Tv');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ10', '2', 'Pay-tv (e.g. Sky)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ10', '3', 'Go to the cinema');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ10', '4', 'Listen to the radio');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ10', '5', 'Read newspapers or magazines');
@@ -19416,6 +19600,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPB
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ13', '43', 'Sweden');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ13', '44', 'Switzerland');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ13', '45', 'Taiwan');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ13', '46', 'Thailand');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ13', '47', 'Turkey');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ13', '48', 'Ukraine');
@@ -19524,6 +19709,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPB
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ21', '2', 'VirginMedia (formerly NTL or Telewest)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ21', '3', 'BT Vision');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ21', '4', 'Tiscali \ Homechoice');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ21', '5', 'Talk Talk TV');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ21', '6', 'Mediaset Premium');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ21', '7', 'Dahlia TV');
@@ -19628,6 +19814,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPB
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ25', '18', 'Vodafone');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ25', '19', 'Lenovo');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ25', '20', 'Huawei');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ25', '21', 'MI');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ25', '22', 'Coolpad');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ25', '23', 'Zhongxing ZTE');
@@ -19729,6 +19916,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPB
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ26', '87', 'M1');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ26', '88', 'Maxis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ26', '89', 'Celcolm');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ26', '90', 'Digi');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ26', '91', 'Yes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ26', '92', 'U Mobile');
@@ -19833,6 +20021,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPB
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ30', '11', 'Chinese');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ30', '12', 'Malay');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ30', '97', 'Other');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ30', '98', 'Prefer not to answer');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPBAQ31', 'Expats', 'ExpatDuration', 'How long have you been living in &lt;pipe in country&gt;?', 'Single');
@@ -19936,6 +20125,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPB
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ33', '21', 'Hong Kong');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ33', '22', 'Hungary');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ33', '23', 'le de la Runion');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ33', '24', 'India');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ33', '25', 'Indonesia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ33', '26', 'Iran');
@@ -20043,6 +20233,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPB
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ38', '9', 'Atrial Fibrillation ');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ38', '10', 'Atherosclerosis (disease in which plaque  builds up on the insides of arteries)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ38', '11', 'Osteoarthritis');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ38', '12', 'Rheumatoid Arthritis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ38', '13', 'Psoriatic Arthritis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ38', '14', 'BPH (benign prostatic hyperplasia), also known as an enlarged prostate [ASK MALES ONLY]');
@@ -20144,6 +20335,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPB
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ39', '11', 'Tumblr');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ39', '12', 'Twitter');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ39', '13', 'TripAdvisor');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ39', '14', 'WeChat');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ39', '15', 'WhatsApp');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPBAQ39', '16', 'YouTube');
@@ -20249,6 +20441,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ5', '9', 'Building inspector');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ5', '10', 'Town and traffic planner');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ5', '11', 'Product and garment designer');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ5', '12', 'Interior designer');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ5', '13', 'Graphic, web and multimedia designer');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ5', '14', 'Other (e.g. statistician, biologist, chemist)');
@@ -20354,6 +20547,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ10', '2', 'Mining and quarrying');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ10', '3', 'Manufacturing');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ10', '4', 'Electricity, gas, steam and air conditioning supply');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ10', '5', 'Water supply; sewerage, waste management and remediation activities');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ10', '6', 'Construction');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ10', '7', 'Wholesale and retail trade; repair of motor vehicles and motorcycles');
@@ -20467,6 +20661,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPO
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPOCQ12_12', 'DM_Office Services', 'PurchaseOfficeServices', 'For which of the following categories are you a Decision Maker, Purchase Influencer or Both? Please select all that apply.', 'Multiple');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ12_12', '1', 'Decision Maker');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ12_12', '2', 'Purchase Influencer');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ12_12', '3', 'Neither');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPOCQ12_13', 'DM_Office management', 'PurchaseOfficeManagement', 'For which of the following categories are you a Decision Maker, Purchase Influencer or Both? Please select all that apply.', 'Multiple');
@@ -20592,6 +20787,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPO
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPOCQ13_14', 'DMIT_Enterprise Applications', 'PurchaseITEnterpriseApplications', 'For which of the following IT products/services do you contribute to the purchase decision process? Please select all that apply.', 'Multiple');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ13_14', '1', 'Decision Maker');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ13_14', '2', 'Purchase Influencer');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPOCQ13_14', '3', 'Neither');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPOCQ14', 'International', 'InternationalOperation', 'Does your company group operate domestically, internationally or intercontinentally? Please select your response below.', 'Single');
@@ -20699,6 +20895,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '402', 'FR - Graduated primary school');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '403', 'FR - GCSEs');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '404', 'FR - NVQ');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '409', 'FR - BA, BTEC Higher National Diploma');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '406', 'FR - A Levels');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '407', 'FR - Higher National Certificate');
@@ -20799,6 +20996,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '2103', 'SG - Secondary 1 - 2 / Express or Normal (Academic)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '2104', 'SG - Secondary 1 - 2 / Normal (Technical) or equivalent');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '2105', 'SG - Secondary 3 - 4/5 / Express or Normal (Academic)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '2106', 'SG - Junior colleges');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '2107', 'SG - Institute of technical education (ITE)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ3', '2108', 'SG - Polytechnic');
@@ -20911,6 +21109,7 @@ insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPPRQ15
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ15', '1', 'Only Spanish');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ15', '2', 'Spanish more than English');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ15', '3', 'Spanish and English equally');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ15', '4', 'English more than Spanish');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ15', '5', 'Only English');
 --
@@ -21015,6 +21214,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPP
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPPRQ19', 'Occupation_Type', 'OccupationType', 'What is your type of work? If you are currently unemployed, please answer the question referring to your last employment.', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ19', '1', 'Self Employed');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ19', '2', 'Employed with a salary/wage');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ19', '3', 'Never worked');
 --
@@ -21118,6 +21318,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '402', 'FR - 600 - 999 EUR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '403', 'FR - 1,000 - 1,249 EUR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '404', 'FR - 1,250 - 1,499 EUR');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '405', 'FR - 1,500 - 1,999 EUR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '406', 'FR - 2,000 - 2,499 EUR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '407', 'FR - 2,500 - 2,999 EUR');
@@ -21218,6 +21419,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '1402', 'BE - 600 - 999 EUR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '1403', 'BE - 1,000 - 1,249 EUR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '1404', 'BE - 1,250 - 1,499 EUR');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '1405', 'BE - 1,500 - 1,999 EUR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '1406', 'BE - 2,000 - 2,499 EUR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '1407', 'BE - 2,500 - 2,999 EUR');
@@ -21318,6 +21520,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '2212', 'TH - 50,000 - 64,999 THB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '2213', 'TH - 65,000 - 79,999 THB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '2214', 'TH - 80,000 - 99,999 THB');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '2215', 'TH - 100,000 THB or more');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '2301', 'RU - Less than 3,000 RUB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ22', '2302', 'RU - 3,000 - 5,999 RUB');
@@ -21422,6 +21625,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPP
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPPRQ24_1_3', 'Gender_HHMbr3', 'HHMbr3Gender', 'Gender of household member 3', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ24_1_3', '1', 'Male');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ24_1_3', '2', 'Female');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPPRQ24_1_4', 'Gender_HHMbr4', 'HHMbr4Gender', 'Gender of household member 4', 'Single');
@@ -21530,6 +21734,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ28', '801', 'AU - Secondary school - years 7-9 or less');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ28', '802', 'AU - Secondary school - years 10');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ28', '803', 'AU - Secondary school - years 11-12');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ28', '804', 'AU - Trade qualifications');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ28', '805', 'AU - Tertiary qualifications other than University degree  (e.g., Technical College)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ28', '806', 'AU - Associates degree');
@@ -21634,6 +21839,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPP
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPPRQ32', 'Unemployed_CIE', 'PrimaryEarnerUnemployment', 'How long has the Chief Income Earner been without work?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ32', '1', '6 months or more');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ32', '2', 'Less than 6 months');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPPRQ33', 'Profession_CIE', 'PrimaryEarnerProfession', 'Please select the profession of the Chief Income Earner, or the group that fits best.', 'Single');
@@ -21740,6 +21946,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ38', '467', 'FR - Unskilled worker - industrial');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ38', '468', 'FR - Unskilled worker - crafts');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ38', '469', 'FR - Farm worker');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ38', '601', 'IT - Entrepreneur/ business owner');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ38', '602', 'IT - Professional (lawyer, architect, journalist, etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ38', '603', 'IT - Free lance sales representative/business agent');
@@ -21851,6 +22058,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ49', '3', 'Brazil');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ49', '4', 'Chile');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ49', '5', 'Colombia');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ49', '6', 'Costa Rica');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ49', '7', 'Cuba');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPPRQ49', '8', 'Dominican Republic');
@@ -21954,6 +22162,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '11', 'AU - Elders Rural Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '12', 'AU - GE Money');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '13', 'AU - Macquarie Bank');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '14', 'AU - Members Equity Bank (ME Bank)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '15', 'AU - NAB (National Australia Bank)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '16', 'AU/DE - Rabobank');
@@ -22054,6 +22263,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '111', 'UK - Natwest');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '112', 'UK - Royal Bank of Scotland');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '113', 'UK - Smile');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '114', 'UK - Yorkshire Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '115', 'CN - Industrial and Commercial Bank of China');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '116', 'CN - China Construction Bank');
@@ -22154,6 +22364,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '211', 'MY - Public Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '212', 'MY - RHB Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '213', 'MY/TH/SG - United Overseas Bank (UOB)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '214', 'TH - Bank of Ayudhya (Krungsi)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '215', 'TH - Bangkok Bank (BBL)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '216', 'TH - Kasikorn Bank (KBank)');
@@ -22254,6 +22465,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '311', 'NO - Bank Norwegian');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '312', 'NO - DNB bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '313', 'NO/DK/SE/PL - Danske bank');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '314', 'NO - Storebrand bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '315', 'NO - Sparebanken Hedmark');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ2', '316', 'NO - SpareBank 1 Nord-Norge');
@@ -22355,6 +22567,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '59', 'DE - SEB Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '60', 'DE - Sparda-Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '61', 'DE - Sparkasse');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '62', 'DE/IT - Unicredit');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '63', 'DE - Volksbank / Raiffeisenbank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '64', 'FR - AXA Banque');
@@ -22455,6 +22668,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '159', 'US - Chase');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '160', 'US - Citizens Bank (New England)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '161', 'US - Citizens Bank of PA');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '162', 'US - City National Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '163', 'US - Comerica Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ3', '164', 'US - Commerce Bank');
@@ -22557,6 +22771,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '41', 'ESP - Caja Mar');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '42', 'ESP - Liberbank (Cajastur, Caja de Extremadura, Caja Cantabria, Caja Castilla la-Mancha)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '43', 'ESP - Kutxabank (BBK, Kutxa, Vital, Caja Sur)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '44', 'ESP - Bankia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '45', 'ESP - Novacaixagalicia (Caixa Galicia y Caixanova)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '46', 'ESP - BMN (Caja Granada, Sa Nostra, Caja Murcia)');
@@ -22657,6 +22872,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '141', 'US/CA - Bank of America (including FIA Card Services)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '142', 'US/CA - Barclays / Barclaycard');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '143', 'US/CA - Capital One');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '144', 'US/CA - Chase');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '145', 'US/CA - Citi / Citibank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ5', '146', 'US/CA - Discover');
@@ -22762,6 +22978,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '3', 'AU - ANZ Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '4', 'AU - Arab Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '5', 'AU - Bank of Queensland');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '6', 'AU - Bank of Melbourne');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '7', 'AU - Banksa');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '8', 'AU - Bankwest');
@@ -22862,6 +23079,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '103', 'IT - Webank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '104', 'IT - Banco Posta');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '105', 'UK - Alliance &amp; Leicester');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '106', 'UK - Co-op');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '107', 'UK - First Direct');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ10', '108', 'UK - Halifax');
@@ -22963,6 +23181,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ11', '57', 'Postbank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ11', '58', 'Bank of Scotland');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ11', '59', 'SEB Bank');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ11', '60', 'Sparda-Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ11', '61', 'Sparkasse');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ11', '62', 'Unicredit');
@@ -23068,6 +23287,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ16', '14', 'AU - Members Equity Bank (ME Bank)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ16', '15', 'AU - NAB (National Australia Bank)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ16', '16', 'AU/DE - Rabobank');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ16', '17', 'AU - RAMS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ16', '18', 'AU - St. George Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ16', '19', 'AU - Suncorp Bank');
@@ -23171,6 +23391,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ19', '23', 'MLC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ19', '24', 'REST');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ19', '25', 'Sunsuper');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ19', '26', 'Suncorp Metway Super');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ19', '27', 'TWUS (Transport Workers Super)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ19', '28', 'Westscheme');
@@ -23272,6 +23493,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ20', '90', 'IT - Genertel');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ20', '91', 'IT - Genialloyd');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ20', '92', 'IT - Ina Assitalia');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ20', '93', 'IT - Linear');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ20', '94', 'IT - Lloyd');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ20', '95', 'IT - Milano Assicurazioni');
@@ -23373,6 +23595,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ21', '110', 'RIAS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ21', '111', 'RSA/Royal Sun Alliance/More Than');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ21', '112', 'Saga');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ21', '113', 'Scottish Widows');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ21', '114', 'Tesco Bank');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ21', '115', 'M&amp;S Money');
@@ -23474,6 +23697,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '82', 'ESP - Santa Luca');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '83', 'ESP - Santander');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '84', 'ESP - Seguros Bilbao');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '85', 'IT - Aurora');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '86', 'IT - Cattolica');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '87', 'IT - Conte');
@@ -23574,6 +23798,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '182', 'US - Massachusetts Mutual Life');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '183', 'US - Met Life');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '184', 'US - New York Life');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '185', 'US - Northwestern Mutual Group');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '186', 'US - Principal Financial');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ22', '187', 'US - State Farm');
@@ -23675,6 +23900,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ23', '81', 'ESP - Sanitas');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ23', '82', 'ESP - Santa Luca');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ23', '83', 'ESP - Santander');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ23', '84', 'ESP - Seguros Bilbao');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ23', '85', 'IT - Aurora');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ23', '86', 'IT - Cattolica');
@@ -23775,6 +24001,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ23', '181', 'CN - China Export and Credit Insurance');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ23', '182', 'CN - Tianan Insurance Co.');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ23', '183', 'CN - Anbang Insurance Co.');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ23', '997', 'Other');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ23', '999', 'Dont know');
 --
@@ -23877,6 +24104,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '703', 'DE - 1,000 - 1,249');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '704', 'DE - 1,250 - 1,499');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '705', 'DE - 1,500 - 1,999');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '706', 'DE - 2,000 - 2,499');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '707', 'DE - 2,500 - 2,999');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '708', 'DE - 3,000 - 3,499');
@@ -23977,6 +24205,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '1705', 'PL - 2,500 - 2,999 PLN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '1706', 'PL - 3,000 - 3,499 PLN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '1707', 'PL - 3,500 - 3,999 PLN');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '1708', 'PL - 4,000 - 4,499 PLN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '1709', 'PL - 5,000 - 7,499 PLN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '1710', 'PL - 7,500 - 10,000 PLN');
@@ -24077,6 +24306,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPF
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '2506', 'NO - 500,000 - 599,999 NOK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '2507', 'NO - 600,000 - 699,999 NOK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '2508', 'NO - 700,000 - 799,999 NOK');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '2509', 'NO - 800,000 - 999,999 NOK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '2510', 'NO - 1,000,000 - 1,199,000 NOK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPFNQ25', '2511', 'NO - 1,200,000 - 1,399,000 NOK');
@@ -24178,6 +24408,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ1', '54', 'Shingles (recurrence of chickenpox as an adult)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ1', '55', 'High Blood Pressure (Hypertension)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ1', '56', 'High Cholesterol');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ1', '57', 'HIV');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ1', '58', 'Intermittent Claudication (pain in leg/calf due to poor circulation that typically occurs from walking and goes away with rest)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ1', '59', 'ITP (disorder in which there is a decrease of platelets in your blood causing bruising of the skin)');
@@ -24280,6 +24511,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '9', 'Atrial Fibrillation');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '10', 'Atherosclerosis (disease in which plaque builds up on the insides of arteries)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '11', 'Osteoarthritis');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '12', 'Rheumatoid Arthritis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '13', 'Psoriatic Arthritis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '14', 'BPH (benign prostatic hyperplasia), also known as an enlarged prostate [ASK MALES ONLY]');
@@ -24380,6 +24612,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '109', 'Dermatitis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '110', 'Diarrhea (frequent)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '111', 'Diverticulitis');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '112', 'Eczema');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '113', 'Fibromyalgia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_1', '114', 'Fungal Infections of the skin or Athletes foot');
@@ -24481,6 +24714,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_2', '69', 'Moderate or severe renal/kidney disease');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_2', '70', 'Multiple Sclerosis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_2', '71', 'Muscular Dystrophy');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_2', '72', 'Osteopenia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_2', '73', 'Osteoporosis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ3_2', '74', 'Overactive Bladder Dry (no urinary leakage)');
@@ -24582,6 +24816,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '29', 'Endometriosis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '30', 'Deep Vein Thrombosis (DVT) (A blood clot in a deep vein, usually in the legs)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '31', 'Type 1 Diabetes');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '32', 'Type 2 Diabetes');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '33', 'Dry Eye');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '34', 'Dysmenorrhea (difficult menstrual flow or painful menstruation)');
@@ -24682,6 +24917,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '129', 'Panic Disorder');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '130', 'Phobias');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '131', 'Post-Traumatic Stress Disorder (PTSD)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '132', 'Restless Legs Syndrome');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '133', 'Shingles (recurrence of chickenpox as an adult)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_1', '134', 'Skin Allergies (hives and other contact allergies)');
@@ -24783,6 +25019,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_2', '89', 'Tuberculosis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_2', '90', 'Thrombocytopenia (any disorder in which there is an abnormally low amount of platelets, which are parts of the blood that help blood to clot)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_2', '91', 'Thyroid condition');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_2', '92', 'Ulcerative Colitis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_2', '93', 'Ulcers (active/peptic stomach or duodenal)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ4_2', '94', 'Urinary Tract Infections (UTI)');
@@ -24888,6 +25125,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPHLQ10', 'Obtain chemotherapy information', 'ChemotherapyInformation', 'Which statement best describes how you have obtained information on chemotherapy treatment?', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ10', '1', 'I have obtained information on chemotherapy by talking with friends and family');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ10', '2', 'I have obtained information on chemotherapy by reading publications');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ10', '3', 'I have obtained information on chemotherapy by searching websites online');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ10', '4', 'I have not obtained information on chemotherapy other than what my doctor or nurse has provided');
@@ -24996,6 +25234,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ18', '5', 'Dupuytrens contracture');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ18', '6', 'Fibromyalgia');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ18', '7', 'Gout');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ18', '8', 'Osteoporosis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ18', '9', 'Osteoarthritis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ18', '10', 'Plantar fasciitis');
@@ -25106,6 +25345,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ28', '97', 'Other');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPHLQ29', 'Blood glucose monitor brand', 'GlucoseMonitor', 'What brand of blood glucose monitor do you currently use?', 'Single');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ29', '1', 'Accu Check Active');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ29', '2', 'Accu Check Advantage');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ29', '3', 'Accu Check Aviva');
@@ -25210,6 +25450,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ34', '99', 'Not sure');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GPHLQ35', 'Medicare Types', 'MedicareTypes', 'You indicated that you have Medicare health insurance.  Which of the following types of Medicare do you currently have?  Please select all that apply.', 'Multiple');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ35', '1', 'Medicare Part A');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ35', '2', 'Medicare Part B');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ35', '3', 'Medicare Part C/Advantage with prescription drug coverage');
@@ -25313,6 +25554,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPH
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ38', '16', 'Muscular Dystrophy');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ38', '17', 'Obesity');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ38', '18', 'Psoriasis');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ38', '19', 'Rheumatoid Arthritis');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ38', '20', 'Anxiety / Depression');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GPHLQ38', '21', 'Bipolar Disorder');
@@ -25423,6 +25665,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CLK
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CLKSpassive_mobile_status', '7', 'Installed');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CLKSpassive_mobile_status', '8', 'Deactivated');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CLKSpassive_mobile_status', '9', 'HandsetNotSupported');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CLKSpassive_mobile_status', '10', 'RegistrationFailure');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CLKSpassive_mobile_status', '11', 'SmsDeliveryFailure');
 --
@@ -25536,6 +25779,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q9_3', '2', '2-3 times a month');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q9_3', '3', 'Once a month');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q9_3', '4', 'Once every 2-3 months');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q9_3', '5', 'Once every 4-6 months');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q9_3', '6', 'Less than once every 6 months');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q9_3', '7', 'Never');
@@ -25647,6 +25891,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q10_1', '14', 'Small Household Appliances (toasters coffee makers etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q10_1', '15', 'Large Household Appliances (refrigerators washing machines etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q10_1', '16', 'Other');
+GO
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MAPSV2_Q10_2', 'GMRetailer_Target', 'MAPSV2_GMRetailer_Target', 'Do you shop in store at any of the following discount retailers for these product categories?', 'Multiple');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q10_2', '1', 'Mens Apparel (clothing underwear shoes accessories)');
@@ -25753,6 +25998,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q10_7', '12', 'Automotive (motor oil windshield wiper blades tires etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q10_7', '13', 'Camping Equipment (sleeping bags tents lanterns etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q10_7', '14', 'Small Household Appliances (toasters coffee makers etc.)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q10_7', '15', 'Large Household Appliances (refrigerators washing machines etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q10_7', '16', 'Other');
 --
@@ -25859,6 +26105,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q11', '10', 'Toys (bikes board games dolls action figures swing sets)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q11', '11', 'Hardware (tools paint ladders)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q11', '12', 'Automotive (motor oil windshield wiper blades tires etc.)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q11', '13', 'Camping Equipment (sleeping bags tents lanterns etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q11', '14', 'Small Household Appliances (toasters coffee makers etc.)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q11', '15', 'Large Household Appliances (refrigerators washing machines etc.)');
@@ -25978,6 +26225,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q14', '4', 'Generally, new technology products are not important in my life');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MAPSV2_Q15', 'Mobile Use In Store', 'MAPSV2_MobileUseInStore', 'Have you done any of these activities on your mobile phone while in a store?', 'Multiple');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q15', '1', 'Browse product selection online');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q15', '2', 'Compare prices online');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV2_Q15', '3', 'Read product reviews online');
@@ -26090,6 +26338,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVbig_region', '30003', 'UK - South');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVbig_region', '30004', 'UK - Northern Ireland');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVbig_region', '40001', 'FR - le-de-France');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVbig_region', '40002', 'FR - North East');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVbig_region', '40003', 'FR - North West');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVbig_region', '40004', 'FR - Centre');
@@ -26193,6 +26442,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVregion', '40010', 'FR - ALSACE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVregion', '40011', 'FR - FRANCHE-COMTE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVregion', '40012', 'FR - PAYS DE LA LOIRE');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVregion', '40013', 'FR - BRETAGNE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVregion', '40014', 'FR - POITOU/CHARENTES');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVregion', '40015', 'FR - AQUITAINE');
@@ -26294,6 +26544,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVnielsen', '70007', 'DE - Nielsen VI (Brandenburg, Mecklenburg-Vorpommern, Sachsen-Anhalt)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVnielsen', '70008', 'DE - Nielsen VII (Sachsen, Thringen)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVnielsen', '999995', 'Missing/Unable to code');
+GO
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GEOVprovince', 'Province', 'GeoProvince', 'Province', 'Single');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVprovince', '50001', 'ES - lava');
@@ -26395,6 +26646,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVprovince', '60045', 'IT - MS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVprovince', '60046', 'IT - LU');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVprovince', '60047', 'IT - PT');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVprovince', '60048', 'IT - FI');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVprovince', '60049', 'IT - LI');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVprovince', '60050', 'IT - PI');
@@ -26496,6 +26748,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcity_size', '10002', 'CSA/CBSA 100,000 - 499,999');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcity_size', '10003', 'CSA/CBSA 500,000 - 1,999,999');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcity_size', '10004', 'CSA/CBSA 2,000,000 plus');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcity_size', '999995', 'Missing/Unable to code');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GEOVdepartment', 'Department', 'GeoDepartment', 'Department', 'Single');
@@ -26598,6 +26851,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVdepartment', '999995', 'Missing/Unable to code');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('GEOVuda_9', 'UDA_9', 'GeoUDA9', 'UDA 9 (Union Des Annonceurs)', 'Single');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVuda_9', '40001', 'FR - REGION PARISIENNE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVuda_9', '40002', 'FR - NORD');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVuda_9', '40003', 'FR - EST');
@@ -26705,6 +26959,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '1304', 'Queens NB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '1305', 'Kings NB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '1306', 'Albert NB');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '1307', 'Westmorland NB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '1308', 'Kent NB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '1309', 'Northumberland NB');
@@ -26805,6 +27060,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '2490', 'La Tuque QC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '2491', 'Le Domaine-du-Roy QC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '2492', 'Maria-Chapdelaine QC');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '2493', 'Lac-Saint-Jean-Est QC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '2494', 'Le Saguenay-et-son-Fjord QC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '2495', 'La Haute-Cte-Nord QC');
@@ -26905,6 +27161,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '4801', 'Division No. 1 AB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '4802', 'Division No. 2 AB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '4803', 'Division No. 3 AB');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '4804', 'Division No. 4 AB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '4805', 'Division No. 5 AB');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcensus_division', '4806', 'Division No. 6 AB');
@@ -27006,6 +27263,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '459', 'Saint-Jean-sur-Richelieu');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '462', 'Montral');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '465', 'Salaberry-de-Valleyfield');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '468', 'Lachute');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '480', 'Val-dOr');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '481', 'Amos');
@@ -27106,6 +27364,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '952', 'Quesnel');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '955', 'Prince Rupert');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '965', 'Terrace');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '970', 'Prince George');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '975', 'Dawson Creek');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcma', '977', 'Fort St. John');
@@ -27207,6 +27466,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '13900', 'Bismarck, ND Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '13940', 'Blackfoot, ID Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '13980', 'Blacksburg-Christiansburg-Radford, VA Metropolitan Statistical Area');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '14010', 'Bloomington, IL Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '14020', 'Bloomington, IN Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '14100', 'Bloomsburg-Berwick, PA Metropolitan Statistical Area');
@@ -27307,6 +27567,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '18380', 'Cordele, GA Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '18420', 'Corinth, MS Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '18460', 'Cornelia, GA Micropolitan Statistical Area');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '18500', 'Corning, NY Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '18580', 'Corpus Christi, TX Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '18620', 'Corsicana, TX Micropolitan Statistical Area');
@@ -27407,6 +27668,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '22540', 'Fond du Lac, WI Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '22580', 'Forest City, NC Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '22620', 'Forrest City, AR Micropolitan Statistical Area');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '22660', 'Fort Collins, CO Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '22700', 'Fort Dodge, IA Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '22780', 'Fort Leonard Wood, MO Micropolitan Statistical Area');
@@ -27507,6 +27769,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '26900', 'Indianapolis-Carmel-Anderson, IN Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '26940', 'Indianola, MS Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '26960', 'Ionia, MI Micropolitan Statistical Area');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '26980', 'Iowa City, IA Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '27020', 'Iron Mountain, MI-WI Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '27060', 'Ithaca, NY Metropolitan Statistical Area');
@@ -27607,6 +27870,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '31180', 'Lubbock, TX Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '31220', 'Ludington, MI Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '31260', 'Lufkin, TX Micropolitan Statistical Area');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '31300', 'Lumberton, NC Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '31340', 'Lynchburg, VA Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '31380', 'Macomb, IL Micropolitan Statistical Area');
@@ -27707,6 +27971,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '35300', 'New Haven-Milford, CT Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '35380', 'New Orleans-Metairie, LA Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '35420', 'New Philadelphia-Dover, OH Micropolitan Statistical Area');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '35440', 'Newport, OR Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '35460', 'Newport, TN Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '35500', 'Newton, IA Micropolitan Statistical Area');
@@ -27807,6 +28072,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '39540', 'Racine, WI Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '39580', 'Raleigh, NC Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '39660', 'Rapid City, SD Metropolitan Statistical Area');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '39700', 'Raymondville, TX Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '39740', 'Reading, PA Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '39780', 'Red Bluff, CA Micropolitan Statistical Area');
@@ -27907,6 +28173,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '44020', 'Spirit Lake, IA Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '44060', 'Spokane-Spokane Valley, WA Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '44100', 'Springfield, IL Metropolitan Statistical Area');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '44140', 'Springfield, MA Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '44180', 'Springfield, MO Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '44220', 'Springfield, OH Metropolitan Statistical Area');
@@ -28007,6 +28274,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '48460', 'West Plains, MO Micropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '48540', 'Wheeling, WV-OH Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '48580', 'Whitewater-Elkhorn, WI Micropolitan Statistical Area');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '48620', 'Wichita, KS Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '48660', 'Wichita Falls, TX Metropolitan Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcbsa', '48700', 'Williamsport, PA Metropolitan Statistical Area');
@@ -28108,6 +28376,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '2050', 'Bethel, AK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '2060', 'Bristol Bay, AK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '2068', 'Denali, AK');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '2070', 'Dillingham, AK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '2090', 'Fairbanks North Star, AK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '2100', 'Haines, AK');
@@ -28208,6 +28477,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '5119', 'Pulaski, AR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '5121', 'Randolph, AR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '5123', 'St Francis, AR');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '5125', 'Saline, AR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '5127', 'Scott, AR');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '5129', 'Searcy, AR');
@@ -28308,6 +28578,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '8051', 'Gunnison, CO');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '8053', 'Hinsdale, CO');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '8055', 'Huerfano, CO');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '8057', 'Jackson, CO');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '8059', 'Jefferson, CO');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '8061', 'Kiowa, CO');
@@ -28408,6 +28679,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '12101', 'Pasco, FL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '12103', 'Pinellas, FL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '12105', 'Polk, FL');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '12107', 'Putnam, FL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '12109', 'St Johns, FL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '12111', 'St Lucie, FL');
@@ -28508,6 +28780,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '13169', 'Jones, GA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '13171', 'Lamar, GA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '13173', 'Lanier, GA');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '13175', 'Laurens, GA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '13177', 'Lee, GA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '13179', 'Liberty, GA');
@@ -28608,6 +28881,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '16039', 'Elmore, ID');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '16041', 'Franklin, ID');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '16043', 'Fremont, ID');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '16045', 'Gem, ID');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '16047', 'Gooding, ID');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '16049', 'Idaho, ID');
@@ -28708,6 +28982,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '17151', 'Pope, IL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '17153', 'Pulaski, IL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '17155', 'Putnam, IL');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '17157', 'Randolph, IL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '17159', 'Richland, IL');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '17161', 'Rock Island, IL');
@@ -28808,6 +29083,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '18147', 'Spencer, IN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '18149', 'Starke, IN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '18151', 'Steuben, IN');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '18153', 'Sullivan, IN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '18155', 'Switzerland, IN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '18157', 'Tippecanoe, IN');
@@ -28908,6 +29184,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '19163', 'Scott, IA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '19165', 'Shelby, IA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '19167', 'Sioux, IA');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '19169', 'Story, IA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '19171', 'Tama, IA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '19173', 'Taylor, IA');
@@ -29008,6 +29285,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '20165', 'Rush, KS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '20167', 'Russell, KS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '20169', 'Saline, KS');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '20171', 'Scott, KS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '20173', 'Sedgwick, KS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '20175', 'Seward, KS');
@@ -29108,6 +29386,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '21155', 'Marion, KY');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '21157', 'Marshall, KY');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '21159', 'Martin, KY');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '21161', 'Mason, KY');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '21163', 'Meade, KY');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '21165', 'Menifee, KY');
@@ -29208,6 +29487,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '22115', 'Vernon, LA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '22117', 'Washington, LA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '22119', 'Webster, LA');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '22121', 'West Baton Rouge, LA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '22123', 'West Carroll, LA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '22125', 'West Feliciana, LA');
@@ -29308,6 +29588,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '26079', 'Kalkaska, MI');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '26081', 'Kent, MI');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '26083', 'Keweenaw, MI');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '26085', 'Lake, MI');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '26087', 'Lapeer, MI');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '26089', 'Leelanau, MI');
@@ -29408,6 +29689,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '27113', 'Pennington, MN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '27115', 'Pine, MN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '27117', 'Pipestone, MN');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '27119', 'Polk, MN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '27121', 'Pope, MN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '27123', 'Ramsey, MN');
@@ -29508,6 +29790,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '28139', 'Tippah, MS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '28141', 'Tishomingo, MS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '28143', 'Tunica, MS');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '28145', 'Union, MS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '28147', 'Walthall, MS');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '28149', 'Warren, MS');
@@ -29608,6 +29891,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '29175', 'Randolph, MO');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '29177', 'Ray, MO');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '29179', 'Reynolds, MO');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '29181', 'Ripley, MO');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '29183', 'St Charles, MO');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '29185', 'St Clair, MO');
@@ -29708,6 +29992,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '31033', 'Cheyenne, NE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '31035', 'Clay, NE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '31037', 'Colfax, NE');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '31039', 'Cuming, NE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '31041', 'Custer, NE');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '31043', 'Dakota, NE');
@@ -29808,6 +30093,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '33013', 'Merrimack, NH');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '33015', 'Rockingham, NH');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '33017', 'Strafford, NH');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '33019', 'Sullivan, NH');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '34001', 'Atlantic, NJ');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '34003', 'Bergen, NJ');
@@ -29908,6 +30194,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '36085', 'Richmond, NY');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '36087', 'Rockland, NY');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '36089', 'St Lawrence, NY');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '36091', 'Saratoga, NY');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '36093', 'Schenectady, NY');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '36095', 'Schoharie, NY');
@@ -30008,6 +30295,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '37161', 'Rutherford, NC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '37163', 'Sampson, NC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '37165', 'Scotland, NC');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '37167', 'Stanly, NC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '37169', 'Stokes, NC');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '37171', 'Surry, NC');
@@ -30108,6 +30396,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '39055', 'Geauga, OH');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '39057', 'Greene, OH');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '39059', 'Guernsey, OH');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '39061', 'Hamilton, OH');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '39063', 'Hancock, OH');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '39065', 'Hardin, OH');
@@ -30208,6 +30497,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '40079', 'Le Flore, OK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '40081', 'Lincoln, OK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '40083', 'Logan, OK');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '40085', 'Love, OK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '40087', 'Mcclain, OK');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '40089', 'Mccurtain, OK');
@@ -30308,6 +30598,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '42053', 'Forest, PA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '42055', 'Franklin, PA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '42057', 'Fulton, PA');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '42059', 'Greene, PA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '42061', 'Huntingdon, PA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '42063', 'Indiana, PA');
@@ -30408,6 +30699,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '46019', 'Butte, SD');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '46021', 'Campbell, SD');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '46023', 'Charles Mix, SD');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '46025', 'Clark, SD');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '46027', 'Clay, SD');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '46029', 'Codington, SD');
@@ -30508,6 +30800,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '47085', 'Humphreys, TN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '47087', 'Jackson, TN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '47089', 'Jefferson, TN');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '47091', 'Johnson, TN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '47093', 'Knox, TN');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '47095', 'Lake, TN');
@@ -30608,6 +30901,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48095', 'Concho, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48097', 'Cooke, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48099', 'Coryell, TX');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48101', 'Cottle, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48103', 'Crane, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48105', 'Crockett, TX');
@@ -30708,6 +31002,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48295', 'Lipscomb, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48297', 'Live Oak, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48299', 'Llano, TX');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48301', 'Loving, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48303', 'Lubbock, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48305', 'Lynn, TX');
@@ -30808,6 +31103,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48495', 'Winkler, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48497', 'Wise, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48499', 'Wood, TX');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48501', 'Yoakum, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48503', 'Young, TX');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '48505', 'Zapata, TX');
@@ -30908,6 +31204,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '51103', 'Lancaster, VA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '51105', 'Lee, VA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '51107', 'Loudoun, VA');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '51109', 'Louisa, VA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '51111', 'Lunenburg, VA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '51113', 'Madison, VA');
@@ -31008,6 +31305,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '53033', 'King, WA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '53035', 'Kitsap, WA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '53037', 'Kittitas, WA');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '53039', 'Klickitat, WA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '53041', 'Lewis, WA');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '53043', 'Lincoln, WA');
@@ -31108,6 +31406,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '55045', 'Green, WI');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '55047', 'Green Lake, WI');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '55049', 'Iowa, WI');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '55051', 'Iron, WI');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '55053', 'Jackson, WI');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVstate_county_code', '55055', 'Jefferson, WI');
@@ -31209,6 +31508,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '184', 'Cleveland-Akron-Canton, OH Combined Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '185', 'Cleveland-Indianola, MS Combined Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '188', 'Clovis-Portales, NM Combined Statistical Area');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '190', 'Columbia-Moberly-Mexico, MO Combined Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '192', 'Columbia-Orangeburg-Newberry, SC Combined Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '194', 'Columbus-Auburn-Opelika, GA-AL Combined Statistical Area');
@@ -31309,6 +31609,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '444', 'Pueblo-Canon City, CO Combined Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '446', 'Pullman-Moscow, WA-ID Combined Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '448', 'Quincy-Hannibal, IL-MO Combined Statistical Area');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '450', 'Raleigh-Durham-Chapel Hill, NC Combined Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '452', 'Rapid City-Spearfish, SD Combined Statistical Area');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('GEOVcsa', '454', 'Redding-Red Bluff, CA Combined Statistical Area');
@@ -31414,6 +31715,11 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CST
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CSTMmesh_household_segment', '7', 'Mature Singletons');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CSTMmesh_household_segment', '8', 'Grown Up Families');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CSTMmesh_household_segment', '9', 'Retired Empty Nesters');
+GO
+--
+insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('CSTMlive_panel_participant', 'Live_Panel_Participant', 'LivePanelParticipant', 'Live Panel Participant', 'Single');
+insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CSTMlive_panel_participant', '1', 'Yes');
+insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('CSTMlive_panel_participant', '2', 'No');
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('UTILmys_indid', 'mys_indid', 'MysIndId', 'Mys IndId', 'character');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MAPSV3_Q1', 'Family member work for', 'MAPSV3_FamilyMemberWorkFor', 'Do you, or does anyone in your immediate family, work for...?', 'Multiple');
@@ -31523,6 +31829,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_1', '13', 'Home furnishings');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_1', '14', 'Small appliances');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_1', '15', 'Automotive');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_1', '16', 'Sporting goods');
 --
 insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MAPSV3_Q9_2', 'Purchase In-store_Target', 'MAPSV3_PurchaseInStore_Target', 'You mentioned you regularly purchase the following products in-store.  Where do you typically purchase these types of products?  Please think only about the physical store locations at which you purchase these products.', 'Multiple');
@@ -31629,6 +31936,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_7', '11', 'Electronics, (TVs, phones, accessories, movies, music &amp; video games)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_7', '12', 'Office supplies');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_7', '13', 'Home furnishings');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_7', '14', 'Small appliances');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_7', '15', 'Automotive');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_7', '16', 'Sporting goods');
@@ -31735,6 +32043,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_13', '9', 'Pharmacy');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_13', '10', 'Apparel (e.g., clothing, accessories)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_13', '11', 'Electronics, (TVs, phones, accessories, movies, music &amp; video games)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_13', '12', 'Office supplies');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_13', '13', 'Home furnishings');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q9_13', '14', 'Small appliances');
@@ -31841,6 +32150,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_6', '7', 'Baby products (e.g., baby food, diapers, clothing)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_6', '8', 'Over-the-counter medicines (e.g., pain relievers, cold medicine)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_6', '9', 'Pharmacy');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_6', '10', 'Apparel (e.g., clothing, accessories)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_6', '11', 'Electronics, (TVs, phones, accessories, movies, music &amp; video games)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_6', '12', 'Office supplies');
@@ -31947,6 +32257,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_12', '5', 'Household chemical products (e.g., household cleaners, dishwashing soap)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_12', '6', 'Health and beauty products (e.g., shampoo, bath soap, nail polish)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_12', '7', 'Baby products (e.g., baby food, diapers, clothing)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_12', '8', 'Over-the-counter medicines (e.g., pain relievers, cold medicine)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_12', '9', 'Pharmacy');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q10_12', '10', 'Apparel (e.g., clothing, accessories)');
@@ -32055,6 +32366,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_1', '8', 'I try to buy American-made products whenever I can');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_1', '9', 'I prefer to buy organic products');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_1', '10', 'I love trying new kinds of snacks');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_1', '11', 'I often research products online before buying them in a store');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_1', '12', 'I feel financially secure');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_1', '13', 'I prefer retailers where I can shop for both personal/household and business/work needs in one place');
@@ -32159,6 +32471,7 @@ insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAP
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_5', '4', 'I am very DIY (do it yourself) when it comes to home repairs and auto maintenance');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_5', '5', 'I usually end up buying a lot on impulse that I didnt plan to buy when I began shopping');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_5', '6', 'I choose foods specifically to help manage health conditions (cholesterol, blood pressure, diabetes, etc.)');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_5', '7', 'Whenever possible, I try to use coupons when I am grocery shopping');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_5', '8', 'I try to buy American-made products whenever I can');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q16_5', '9', 'I prefer to buy organic products');
@@ -32265,6 +32578,7 @@ insert into [dbo].[Attributes](Id, Name, ShortName, Label, Type) Values('MAPSV3_
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q19', '1', 'African / African-American');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q19', '2', 'Asian');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q19', '3', 'Caucasian / White');
+GO
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q19', '4', 'Indigenous Peoples (i.e. Native American, Pacific Islander, Aboriginal, Aleutian)');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q19', '5', 'Other');
 insert into [dbo].[AttributeOptions](AttributeId, Code, Description) Values('MAPSV3_Q19', '6', 'Prefer not to answer');
