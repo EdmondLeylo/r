@@ -1,5 +1,7 @@
 @ECHO off
 
+cd %cd%
+
 IF "%~1"=="" (
 SET ServerName=TAREK-PC\MSSQLSERVER12
 SET DBName=OffersII
