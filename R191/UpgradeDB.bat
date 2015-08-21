@@ -1,9 +1,7 @@
 @ECHO off
 
-cd %cd%
-
 IF "%~1"=="" (
-SET ServerName=TAREK-PC\MSSQLSERVER12
+SET ServerName=EDMOND-PC\edmond
 SET DBName=OffersII
 ::If using sql server Integrated Security keep the Username and Password empty
 SET Username=
@@ -15,20 +13,32 @@ SET Username=%3
 SET Password=%4
 )
 
-SET RESULT=false
-IF [%Username%] == [] set RESULT=TRUE
-IF [%Password%] == [] set RESULT=TRUE
+SET DB_INFO=TRUE
+IF [%ServerName%] == [] set DB_INFO=FALSE
+IF [%DBName%] == [] set DB_INFO=FALSE
+IF "%DB_INFO%" == "FALSE" (
+	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
+	echo :::::Error: Please provide the required missing info ServerName\DBName:::::.
+	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
+	GOTO END
+)
+
+
+
+SET INTEGRATED_SECURITY=FALSE
+IF [%ServerName%] == [] set INTEGRATED_SECURITY=TRUE
+IF [%Password%] == [] set INTEGRATED_SECURITY=TRUE
 
 SET ReleaseDIR=%~dp0
 SET ReleaseFolder=%ReleaseDIR:~0,-1%
 for %%f IN ("%ReleaseFolder%") DO SET ReleaseNumber=%%~nxf
 
-IF NOT EXIST "%ReleaseNumber%.txt" (
+IF NOT EXIST "%ReleaseDIR%%ReleaseNumber%.txt" (
 
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
-	echo ::::: Error %ReleaseNumber%.txt was not found. The DB upgrade has terminated :::::.
+	echo ::::: Error: %ReleaseNumber%.txt was not found. The DB upgrade has terminated ::::.
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
-	GOTO err_handler
+	GOTO END
 
 )
 
@@ -45,7 +55,7 @@ SET ReleaseScriptFile=%ReleaseDIR%%ReleaseFileName%
 @ECHO --Begin Transaction>> "%ReleaseScriptFile%"
 @ECHO BEGIN TRAN;>> "%ReleaseScriptFile%"
 @ECHO GO>> "%ReleaseScriptFile%"
-FOR /F "tokens=* delims=" %%x in (%ReleaseNumber%.txt) DO (
+FOR /F "tokens=* delims=" %%x in (%ReleaseDIR%%ReleaseNumber%.txt) DO (
 	@ECHO :r $^(path^)%%x>> "%ReleaseScriptFile%"
 	@ECHO GO>> "%ReleaseScriptFile%"	
 )
@@ -57,11 +67,11 @@ IF NOT EXIST "%ReleaseScriptFile%" (
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	echo ::::: Error creating %ReleaseFileName%. The DB upgrade has terminated ::::::::::.
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
-	GOTO err_handler
+	GOTO END
 
 )
 
-IF "%RESULT%" == "TRUE" (	
+IF "%INTEGRATED_SECURITY%" == "TRUE" (	
     sqlcmd -S %ServerName% -d %DBName% -i "%ReleaseScriptFile%" -v path="%ReleaseDIR%"
 )ELSE (	
 	sqlcmd -S %ServerName% -d %DBName% -i "%ReleaseScriptFile%" -v path="%ReleaseDIR%"	-U %Username% -P %Password%
@@ -70,7 +80,7 @@ IF "%RESULT%" == "TRUE" (
 		
 	IF ERRORLEVEL 1 GOTO err_handler
 
-	IF "%RESULT%" == "TRUE" (			
+	IF "%INTEGRATED_SECURITY%" == "TRUE" (			
 		sqlcmd -S %ServerName% -d %DBName% -Q "INSERT INTO DBVersionHistory (VersionNumber, Status) VALUES('%ReleaseNumber%', 1);"	
 	)ELSE (	
 		sqlcmd -S %ServerName% -d %DBName% -Q "INSERT INTO DBVersionHistory (VersionNumber, Status) VALUES('%ReleaseNumber%', 1);"	 -U %Username% -P %Password%
@@ -82,7 +92,7 @@ IF "%RESULT%" == "TRUE" (
 
 	:err_handler
 	
-	IF "%RESULT%" == "TRUE" (	
+	IF "%INTEGRATED_SECURITY%" == "TRUE" (	
 		sqlcmd -S %ServerName% -d %DBName% -Q "INSERT INTO DBVersionHistory (VersionNumber, Status) VALUES('%ReleaseNumber%', 0);"
 	)ELSE (		
 		sqlcmd -S %ServerName% -d %DBName% -Q "INSERT INTO DBVersionHistory (VersionNumber, Status) VALUES('%ReleaseNumber%', 0);"  -U %Username% -P %Password%
