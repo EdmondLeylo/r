@@ -21,7 +21,7 @@ SET ReleaseDIR=%~dp0
 SET ReleaseFolder=%ReleaseDIR:~0,-1%
 for %%f IN ("%ReleaseFolder%") DO SET ReleaseNumber=%%~nxf
 
-IF NOT EXIST %ReleaseNumber%.txt (
+IF NOT EXIST "%ReleaseNumber%.txt" (
 
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	echo ::::: Error %ReleaseNumber%.txt was not found. The DB upgrade has terminated :::::.
@@ -50,7 +50,7 @@ FOR /F "tokens=* delims=" %%x in (%ReleaseNumber%.txt) DO (
 @ECHO COMMIT TRAN;>> "%ReleaseScriptFile%"
 @ECHO GO>> "%ReleaseScriptFile%"
 
-IF NOT EXIST %ReleaseScriptFile% (
+IF NOT EXIST "%ReleaseScriptFile%" (
 
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	echo ::::: Error creating %ReleaseFileName%. The DB upgrade has terminated ::::::::::.
