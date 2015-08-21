@@ -55,7 +55,7 @@ SET ReleaseScriptFile=%ReleaseDIR%%ReleaseFileName%
 @ECHO --Begin Transaction>> "%ReleaseScriptFile%"
 @ECHO BEGIN TRAN;>> "%ReleaseScriptFile%"
 @ECHO GO>> "%ReleaseScriptFile%"
-FOR /F "tokens=* delims=" %%x in ("%ReleaseDIR%%ReleaseNumber%.txt") DO (
+FOR /F "usebackq tokens=* delims=" %%x in ("%ReleaseDIR%%ReleaseNumber%.txt") DO (
 	@ECHO :r $^(path^)%%x>> "%ReleaseScriptFile%"
 	@ECHO GO>> "%ReleaseScriptFile%"	
 )
