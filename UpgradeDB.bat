@@ -1,4 +1,4 @@
-::@ECHO off
+@ECHO off
 
 IF "%~1"=="" (
 SET ServerName=TAREK-PC\MSSQLSERVER12
