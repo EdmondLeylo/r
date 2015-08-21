@@ -5,7 +5,6 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_PADDING ON
-RAISERROR('My Error Message',15,1)
 GO
 
 -- --------------------------------------------------
