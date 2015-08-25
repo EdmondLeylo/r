@@ -2,5 +2,5 @@
 
 CREATE TABLE test_table
 (
-test_col int(4)
+test_col int
 );
