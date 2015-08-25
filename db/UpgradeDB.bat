@@ -92,7 +92,6 @@ IF "%INTEGRATED_SECURITY%" == "TRUE" (
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	echo ::::: DB upgrade successful :::::::::::::::::::::::::::::::::::::::::::.
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
-	IF NOT "%~1"=="" ( exit /b 0 )
 	GOTO :END
 
 	:err_handler
@@ -110,5 +109,4 @@ IF "%INTEGRATED_SECURITY%" == "TRUE" (
 
 	:END
 	
-PAUSE
 
