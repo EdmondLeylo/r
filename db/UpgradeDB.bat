@@ -1,8 +1,8 @@
 @ECHO off
 
 IF "%~1"=="" (
-SET ServerName=
-SET DBName=
+SET ServerName=EDMOND-PC\edmond
+SET DBName=OffersII
 ::If using sql server Integrated Security keep the Username and Password empty
 SET Username=
 SET Password=
@@ -13,12 +13,15 @@ SET Username=%3
 SET Password=%4
 )
 
+
+
 SET DB_INFO=TRUE
 IF [%ServerName%] == [] SET DB_INFO=FALSE
 IF [%DBName%] == [] SET DB_INFO=FALSE
 IF "%DB_INFO%" == "FALSE" (
+	SET ERROR_MSG=Error: Please provide the required missing info ServerName\DBName
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
-	echo :::::Error: Please provide the required missing info ServerName\DBName:::::.
+	echo :::::%ERROR_MSG%:::::.
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	IF NOT "%~1"=="" ( exit /b 2 )
 	GOTO END
@@ -36,9 +39,9 @@ SET ReleaseFolder=%ReleaseDIR:~0,-1%
 IF "%ReleaseNumber%" == "" (for %%f IN ("%ReleaseFolder%") DO SET ReleaseNumber=%%~nxf)
 
 IF NOT EXIST "%ReleaseDIR%index.txt" (
-
+	SET ERROR_MSG=Error: index.txt was not found. The DB upgrade has terminated
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
-	echo ::::: Error: index.txt was not found. The DB upgrade has terminated :::.
+	echo ::::: %ERROR_MSG%  :::.
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	IF NOT "%~1"=="" ( exit /b 2 )
 	GOTO END
@@ -66,9 +69,9 @@ FOR /F "usebackq tokens=* delims=" %%x in ("%ReleaseDIR%index.txt") DO (
 @ECHO GO>> "%ReleaseScriptFile%"
 
 IF NOT EXIST "%ReleaseScriptFile%" (
-
+	SET ERROR_MSG=Error creating %ReleaseFileName%. The DB upgrade has terminated
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
-	echo ::::: Error creating %ReleaseFileName%. The DB upgrade has terminated ::::::::::.
+	echo ::::: %ERROR_MSG%  ::::::::::.
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	IF NOT "%~1"=="" ( exit /b 2 )
 	GOTO END
@@ -100,9 +103,10 @@ IF "%INTEGRATED_SECURITY%" == "TRUE" (
 		sqlcmd -S %ServerName% -d %DBName% -Q "INSERT INTO DBVersionHistory (VersionNumber, Status) VALUES('%ReleaseNumber%', 0);"
 	)ELSE (		
 		sqlcmd -S %ServerName% -d %DBName% -Q "INSERT INTO DBVersionHistory (VersionNumber, Status) VALUES('%ReleaseNumber%', 0);"  -U %Username% -P %Password%
-	)		
+	)
+	SET ERROR_MSG=DB upgrade failed. The changes are Rolled back		
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
-	echo ::::: DB upgrade failed. The changes are Rolled back ::::::::::::::::::.
+	echo ::::: %ERROR_MSG% ::::::::::::::::::.
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	
 	IF NOT "%~1"=="" ( exit /b 2 )
