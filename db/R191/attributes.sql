@@ -5,7 +5,6 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_PADDING ON
-raiserror("50001",15,1);
 GO
 
 -- --------------------------------------------------
