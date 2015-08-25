@@ -1,1 +1,0 @@
-loggly.admin.server=lsreng.loggly.com
