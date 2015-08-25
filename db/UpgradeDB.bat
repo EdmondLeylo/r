@@ -109,5 +109,5 @@ IF "%INTEGRATED_SECURITY%" == "TRUE" (
 
 	:END
 	
-	
+PAUSE
 
