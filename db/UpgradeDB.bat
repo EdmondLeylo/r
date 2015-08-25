@@ -20,6 +20,7 @@ IF "%DB_INFO%" == "FALSE" (
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	echo :::::Error: Please provide the required missing info ServerName\DBName:::::.
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
+	IF NOT "%~1"=="" ( exit /b 2 )
 	GOTO END
 )
 
@@ -39,6 +40,7 @@ IF NOT EXIST "%ReleaseDIR%index.txt" (
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	echo ::::: Error: index.txt was not found. The DB upgrade has terminated :::.
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
+	IF NOT "%~1"=="" ( exit /b 2 )
 	GOTO END
 
 )
@@ -68,6 +70,7 @@ IF NOT EXIST "%ReleaseScriptFile%" (
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 	echo ::::: Error creating %ReleaseFileName%. The DB upgrade has terminated ::::::::::.
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
+	IF NOT "%~1"=="" ( exit /b 2 )
 	GOTO END
 
 )
